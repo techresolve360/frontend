@@ -205,25 +205,25 @@ export default function Testimonials() {
       name: "Salma Begum",
       location: "Hyderabad, Telangana",
       avatar: "https://randomuser.me/api/portraits/women/44.jpg",
-      text: `I was scared when recovery agents started coming to my house. They were so rude, and I didn’t know what to do. These guys handled everything for me and settled my 3 lakh credit card debt for only 1.2 lakh. Thank you for all your help!`,
+      text: `I was scared when recovery agents started coming to my house. They were so rude, and I didn’t know what to do. These guys handled everything for me and settled my <b>3 lakh</b> credit card debt for only <b>1.2 lakh</b>. Thank you for all your help!`,
     },
     {
       name: "Deepak Sharma",
       location: "Lucknow, Uttar Pradesh",
       avatar: "https://randomuser.me/api/portraits/men/55.jpg",
-      text: `Agents came to my office and shouted in front of my colleagues. This team stopped all that and negotiated my 6 lakh loan down to 2.5 lakh. I can finally sleep now.`,
+      text: `Agents came to my office and shouted in front of my colleagues. This team stopped all that and negotiated my <b>6 lakh</b> loan down to <b>2.5 lakh</b>. I can finally sleep now.`,
     },
     {
       name: "Rina D'souza",
       location: "Kochi, Kerala",
       avatar: "https://randomuser.me/api/portraits/women/65.jpg",
-      text: `Recovery agents embarrassed me in front of my neighbors. This team handled everything, and I only had to pay 1 lakh out of my 2.5 lakh loan.`,
+      text: `Recovery agents embarrassed me in front of my neighbors. This team handled everything, and I only had to pay <b>1 lakh</b> out of my <b>2.5 lakh</b> loan.`,
     },
     {
       name: "Ayesha Khan",
       location: "Pune, Maharashtra",
       avatar: "https://randomuser.me/api/portraits/women/75.jpg",
-      text: `The agents were calling me every hour. I’m thankful they stopped the calls and got my 4 lakh bill settled for 1.5 lakh.`,
+      text: `The agents were calling me every hour. I’m thankful they stopped the calls and got my <b>4 lakh</b> bill settled for <b>1.5 lakh</b>.`,
     },
   ];
 
