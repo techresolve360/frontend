@@ -47,6 +47,14 @@ const BlueText = styled.span`
   color: #0073d7;
 `;
 
+const Subheading = styled.p`
+  font-size: 1.1rem;
+  color: #222;
+  margin-bottom: 30px;
+  text-align: start;
+    font-family: 'Poppins', sans-serif;
+`;
+
 const FaqItem = styled.div`
   border-top: 1px solid #ccc;
   padding: 15px 0;
@@ -252,6 +260,9 @@ const Faq = () => {
         <FaqTitle>
           Frequently Asked <BlueText>Questions</BlueText>
         </FaqTitle>
+        <Subheading>
+          Your questions, answered clearly.
+        </Subheading>
 
         {faqData.map((item, index) => (
           <motion.div
