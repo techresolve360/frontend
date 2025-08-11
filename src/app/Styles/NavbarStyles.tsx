@@ -116,12 +116,12 @@ export const ContactButton = styled.button`
   }
 
   @media (max-width: 768px) {
-    font-size: 13px;
+    font-size: 16px;
     gap: 8px;
   }
 
   @media (max-width: 576px) {
-    font-size: 12px;
+    font-size: 18px;
     padding: 8px 10px;
   }
 `;
@@ -133,7 +133,7 @@ export const EmailText = styled.a`
   font-weight: 600;
   text-decoration: none;
   line-height: 1.4;
-  text-align: center;
+  text-align: left;
 
   &:hover {
     text-decoration: underline;
@@ -144,7 +144,7 @@ export const EmailText = styled.a`
   }
 
   @media (max-width: 576px) {
-    font-size: 12px;
+    font-size: 14px;
   }
 `;
 
@@ -188,7 +188,7 @@ export const MobileMenu = styled.ul`
       text-transform: uppercase;
 
       @media (max-width: 576px) {
-        font-size: 16px;
+        font-size: 18px;
       }
     }
 

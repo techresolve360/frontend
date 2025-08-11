@@ -8,9 +8,6 @@ import Modal from "../../Components/ContactFormModal";
 
 // ===== Styled Components =====
 const SectionWrapper = styled.div`
-  background-image: url("/RBG.png");
-  background-size: cover;
-  background-position: center;
   padding: 0px 70px;
 
   @media (max-width: 768px) {
@@ -49,6 +46,7 @@ const FeesSection = styled.section`
   background-image: url("/fees-bg.png");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   padding: 60px 70px;
   color: #fff;
   text-align: left;
@@ -86,7 +84,7 @@ const FeesHeading = styled.h2`
 const FeesSubText = styled.p`
   font-size: 26px;
   font-family: 'Poppins', sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   max-width: 100%;
   text-align: center;
   margin: 10px 0 30px 0;
@@ -209,7 +207,14 @@ export default function HelpAndFees() {
   ];
 
   return (
-    <div style={{ padding: "40px 0" }}>
+    <div 
+    style={{ 
+    padding: "40px 0", 
+    backgroundImage: "url('/RBG.png')", 
+    backgroundSize: "cover", 
+    backgroundPosition: "center", 
+    backgroundRepeat: "no-repeat" 
+    }} >
       {/* Heading Before Infographic */}
       <SectionWrapper>
         <SectionHeading>
@@ -254,7 +259,7 @@ export default function HelpAndFees() {
         </CardsRow>
 
         <Note>
-          * Above <span>50 lac</span> Fee to agreed on call
+          <span>*</span> Above <span>50 lac</span> Fee to agreed on call
         </Note>
       </FeesSection>
 

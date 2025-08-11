@@ -36,7 +36,7 @@ export default function Footer() {
               Led by Advocate Vipin Choudhary Transparent. Ethical. Always on your side.
             </p>
             <SocialIcons>
-              <a href="https://www.linkedin.com/company/">
+              <a href="https://www.linkedin.com/company/resolve-360/">
                 <img src="linkedin1.png" alt="LinkedIn" />
               </a>
             </SocialIcons>

@@ -104,17 +104,17 @@ export default function CyberFraudStats() {
       <CardsContainer>
         {[
           {
-            icon: "/icon1.png",
+            icon: "/icons/icon1.png",
             title: "Ethical and Transparent Solutions",
             delay: 0.0,
           },
           {
-            icon: "/icon2.png",
+            icon: "/icons/icon2.png",
             title: "Proven Expertise in Loan Settlement",
             delay: 0.1,
           },
           {
-            icon: "/icon3.png",
+            icon: "/icons/icon3.png",
             title: "Dedicated Support at Every Step",
             delay: 0.2,
           },
