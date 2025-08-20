@@ -11,6 +11,7 @@ import {
   RightSection,
   FooterBottom,
   FooterLogo,
+  SocialIconsWrapper,
 } from "../Styles/FooterStyles";
 
 export default function Footer() {
@@ -35,11 +36,23 @@ export default function Footer() {
             <p>
               Led by Advocate Vipin Choudhary Transparent. Ethical. Always on your side.
             </p>
-            <SocialIcons>
-              <a href="https://www.linkedin.com/company/resolve-360/">
-                <img src="linkedin1.png" alt="LinkedIn" />
-              </a>
-            </SocialIcons>
+            <SocialIconsWrapper>
+  <h3 className="text-lg font-semibold text-gray-800 mb-2">Follow Us</h3>
+  <SocialIcons>
+    <a 
+      href="https://www.linkedin.com/company/resolve-360/" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      <img 
+        src="linkedin1.png" 
+        alt="LinkedIn" 
+        className="w-6 h-6 hover:scale-110 transition-transform duration-200" 
+      />
+    </a>
+    {/* Add more social icons here */}
+  </SocialIcons>
+</SocialIconsWrapper>
           </LeftSection>
         </motion.div>
 
@@ -82,7 +95,7 @@ export default function Footer() {
             <a>Baskara's Plaza, 2nd Floor, HSR  Layout Sector 6, 560102, Karnataka, Bangalore</a>
 
             <p>Call</p>
-            <a href="tel:+917044432779">7044432779</a>
+            <a>7044432779</a>
 
             <p>Email</p>
             <a href="mailto:support@resolve360.in">support@resolve360.in</a>

@@ -1,24 +1,23 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
-import styled, { css, keyframes } from "styled-components";
-import Team from "./Core Team/page"
-import WhyStandout from "../home/WhyStandout/page"
+import React from "react";
+import styled from "styled-components";
+import Team from "./Core Team/page";
+import WhyStandout from "../home/WhyStandout/page";
 import TailoredService from "./Tailored Services/page";
 import Consultation from "../home/consultation/page";
 
-
 const ServicesSection = styled.section`
   display: flex;
-  align-items: flex-start; /* Align top */
+  align-items: center;
+  justify-content: space-between;
   background-image: url("/RBG.png");
   background-size: cover;
   background-position: center;
-  justify-content: space-between;
   padding: 120px 70px 10px 70px;
   gap: 60px;
   background-color: #fff;
-  margin: auto; /* Centers content on wide screens */
+  margin: auto;
 
   @media (max-width: 1200px) {
     padding: 120px 50px 10px 50px;
@@ -39,7 +38,6 @@ const ServicesSection = styled.section`
 
   @media (max-width: 480px) {
     padding: 120px 16px 40px 16px;
-
   }
 `;
 
@@ -54,7 +52,7 @@ const TextContent = styled.div`
     font-weight: 800;
     margin-bottom: 24px;
     color: #000;
-    font-family: 'poppins', sans-serif;
+    font-family: "poppins", sans-serif;
     line-height: 1.2;
 
     span {
@@ -77,7 +75,7 @@ const TextContent = styled.div`
   p {
     font-size: 20px;
     line-height: 1.8;
-    font-family: 'poppins', sans-serif;
+    font-family: "poppins", sans-serif;
     color: #111827;
     margin-bottom: 24px;
 
@@ -100,45 +98,50 @@ const TextContent = styled.div`
   }
 `;
 
-const ImageTop = styled.img`
-  width: 100%;    /* Full width of the TextContent container */
+const ImageRight = styled.img`
+  flex: 1;
+  width: 400px;   /* fixed width */
+  height: 400px;  /* fixed height to make it square */
   border-radius: 16px;
   box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.15);
-  object-fit: cover;
-  margin-bottom: 32px; /* Space below the image */
+  object-fit: cover; /* crop while covering */
 
-  @media (max-width: 768px) {
-    margin-bottom: 24px;
+  @media (max-width: 992px) {
+    width: 300px;
+    height: 300px;
   }
 
-  @media (max-width: 480px) {
-    margin-bottom: 20px;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;   /* allow responsive on small screens */
+    aspect-ratio: 1/1; /* keep it square */
   }
 `;
 
 const Services = () => {
   return (
     <>
-     
-        <ServicesSection>
-          <TextContent>
-                        {/* Text below */}
-            <h2>
-              Our Mission: <span>Empowering Financial Freedom</span>
-            </h2>
-            {/* Image on top */}
-            <ImageTop src="/mission.png" alt="Mission" />
+      <ServicesSection>
+        {/* Text on the left */}
+        <TextContent>
+          <h2>
+            Our Mission: <span>Empowering Financial Freedom</span>
+          </h2>
+          <p>
+            At Resolve360, our mission is to help individuals overcome financial
+            challenges and reclaim their peace of mind. Using AI-powered
+            insights and expert legal guidance, we provide tailored solutions
+            for loan settlements and recovery agent harassment.
+          </p>
+          <p>
+            We believe in a client-first approach, offering support, empathy,
+            and the expertise needed to guide you toward financial freedom.
+          </p>
+        </TextContent>
 
-
-            <p>
-              At Resolve360, our mission is to help individuals overcome financial challenges and reclaim their peace of mind. Using AI-powered insights and expert legal guidance, we provide tailored solutions for loan settlements and recovery agent harassment.
-            </p>
-            <p>
-              We believe in a client-first approach, offering support, empathy, and the expertise needed to guide you toward financial freedom.
-            </p>
-          </TextContent>
-        </ServicesSection>
-
+        {/* Image on the right */}
+        <ImageRight src="/mission.png" alt="Mission" />
+      </ServicesSection>
 
       <Team />
       <WhyStandout />

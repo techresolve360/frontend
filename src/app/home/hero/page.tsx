@@ -3,7 +3,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion, useInView } from "framer-motion";
-import Modal from "../../Components/ContactFormModal"; 
+import Modal from "../../Components/ContactFormModal";
 
 // Styled Components
 const Section = styled.section`
@@ -17,14 +17,13 @@ const Section = styled.section`
   overflow: hidden;
 
   @media (max-width: 1024px) {
-    padding: 2.5rem 50px;
+    padding: 2.5rem 40px;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: center;
   }
 
   @media (max-width: 768px) {
-    padding: 8rem 20px;
+    padding: 6rem 20px;
     min-height: auto;
   }
 `;
@@ -58,15 +57,9 @@ const BackgroundImage = styled.div<{ activeIndex: number }>`
   }
 `;
 
-const Overlay = styled.div`
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: -1;
-`;
-
 const Content = styled.div`
   position: relative;
+  margin: 7rem 0;
   max-width: 950px;
   width: 100%;
   text-align: left;
@@ -75,8 +68,6 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  word-break: break-word;
-  overflow-wrap: break-word;
 
   @media (max-width: 1024px) {
     max-width: 100%;
@@ -89,15 +80,13 @@ const Title = styled.h1`
   font-weight: bold;
   color: #fff;
   line-height: 1.2;
-  max-width: 100%;
-  word-break: break-word;
 
   @media (max-width: 1024px) {
     font-size: 2.4rem;
   }
 
   @media (max-width: 768px) {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 `;
 
@@ -106,32 +95,62 @@ const Subtitle = styled.p`
   font-size: 1.2rem;
   font-family: "Lato", sans-serif;
   color: #dcdcdc;
-  max-width: 100%;
-  word-break: break-word;
 
   @media (max-width: 768px) {
     font-size: 0.95rem;
   }
 `;
 
-const USP = styled.p`
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: 500;
-  margin-top: 20px;
-  line-height: 1.4;
-  max-width: 100%;
-  word-break: break-word;
-
-  @media (max-width: 768px) {
-    font-size: 1rem;
-  }
-`;
-
 const ButtonContainer = styled.div`
   margin-top: 25px;
   display: flex;
-  gap: 15px;
+`;
+
+const CTAButton = styled(motion.button)`
+  padding: 12px 28px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+`;
+
+const FeaturesContainer = styled.div`
+  margin: 5rem 0;
+  width: 100%;
+  max-width: auto; /* ✅ container width limit (optional) */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+`;
+
+const Feature = styled.div`
+  padding: 1.5rem 1rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  background: transparent;
+  position: relative;
+
+  /* Divider line between items */
+  border-right: 2px solid rgba(255, 255, 255, 0.3);
+
+  &:last-child {
+    border-right: none;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    padding: 1rem 0;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
 `;
 
 const CarouselContainer = styled.div`
@@ -149,7 +168,6 @@ const SlideWrapper = styled(motion.div)`
 const CarouselSlide = styled.div`
   width: 100%;
   flex-shrink: 0;
-  padding-right: 50px;
 `;
 
 const DotsContainer = styled.div`
@@ -174,7 +192,7 @@ const HomeSection: React.FC = () => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true });
   const [carouselIndex, setCarouselIndex] = useState(0);
-  const [isModalOpen, setIsModalOpen] = useState(false); // Modal state
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleSwipe = (direction: number) => {
     setCarouselIndex((prev) => (prev + direction + 2) % 2);
@@ -195,10 +213,8 @@ const HomeSection: React.FC = () => {
     <Section id="home" ref={sectionRef}>
       <BackgroundImage activeIndex={carouselIndex}>
         <img src="/BG1.png" alt="Slide 1 Background" />
-        <img src="/BG2.png" alt="Slide 2 Background" />
+        <img src="/BG_2.png" alt="Slide 2 Background" />
       </BackgroundImage>
-
-      <Overlay />
 
       <CarouselContainer>
         <SlideWrapper
@@ -219,30 +235,29 @@ const HomeSection: React.FC = () => {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <Title>India Most Trusted Services for Loan Settlement & Anti-Harassment</Title>
+              <Title>
+                India Most Trusted Services for Loan Settlement & Anti-Harassment
+              </Title>
               <Subtitle>
                 Stop harassment, settle loans, and achieve peace of mind
               </Subtitle>
               <ButtonContainer>
-                <motion.button
+                <CTAButton
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => setIsModalOpen(true)} // open modal
-                  style={{
-                    padding: "12px 24px",
-                    background: "#007bff",
-                    color: "#fff",
-                    border: "none",
-                    borderRadius: "6px",
-                    fontSize: "16px",
-                    fontWeight: 600,
-                    cursor: "pointer",
-                  }}
+                  onClick={() => setIsModalOpen(true)}
                 >
                   Book Free Consultation
-                </motion.button>
+                </CTAButton>
               </ButtonContainer>
             </Content>
+             {/* Features Section */}
+              <FeaturesContainer>
+                <Feature>Anti Harassment Services</Feature>
+                <Feature>Reduce Your Debt by Up to 60%</Feature>
+                <Feature>Legal Support</Feature>
+                <Feature>Tailored Solutions for Your Needs</Feature>
+              </FeaturesContainer>
           </CarouselSlide>
 
           {/* Slide 2 */}
@@ -251,9 +266,10 @@ const HomeSection: React.FC = () => {
               <Title>FQUANTIVA FINANCIAL CONSULTANCY PRIVATE LIMITED</Title>
               <Subtitle>CIN: U66190KA2025PTC205922</Subtitle>
               <Subtitle>GSTIN: 29ABCDE1234F1Z5</Subtitle>
-              <USP>
-                Om Chambers, 648/A, 4th, Floor, Binnamangala, Indiranagar (Bangalore), Bangalore North, Bangalore- 560038
-              </USP>
+              <Subtitle>
+                Om Chambers, 648/A, 4th Floor, Binnamangala, Indiranagar,
+                Bangalore North, Bangalore- 560038
+              </Subtitle>
             </Content>
           </CarouselSlide>
         </SlideWrapper>

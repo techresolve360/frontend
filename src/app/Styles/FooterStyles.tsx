@@ -60,8 +60,8 @@ export const SocialIcons = styled.div`
   gap: 15px;
 
   img {
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
     transition: transform 0.3s ease-in-out;
 
     &:hover {
@@ -159,5 +159,15 @@ export const FooterLogo = styled.img`
 
   @media (max-width: 768px) {
     width: 110px;
+  }
+`;
+
+export const SocialIconsWrapper = styled.div`
+  h3 {
+    font-size: 1.2rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #fff;
   }
 `;
