@@ -198,31 +198,31 @@ export default function Testimonials() {
     {
       name: "Ravi Kumar",
       location: "Bengaluru, Karnataka",
-      avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+      avatar: "/avatar/image1.png",
       text: `I had a <b>5 lakh</b> personal loan I couldn’t repay. The agents started calling day and night, and I was so stressed. The team here helped me settle it for just <b>2 lakh</b>. Can’t believe how smooth it was!`,
     },
     {
       name: "Salma Begum",
       location: "Hyderabad, Telangana",
-      avatar: "https://randomuser.me/api/portraits/women/44.jpg",
+      avatar: "/avatar/image2.png",
       text: `I was scared when recovery agents started coming to my house. They were so rude, and I didn’t know what to do. These guys handled everything for me and settled my <b>3 lakh</b> credit card debt for only <b>1.2 lakh</b>. Thank you for all your help!`,
     },
     {
       name: "Deepak Sharma",
       location: "Lucknow, Uttar Pradesh",
-      avatar: "https://randomuser.me/api/portraits/men/55.jpg",
+      avatar: "/avatar/image3.png",
       text: `Agents came to my office and shouted in front of my colleagues. This team stopped all that and negotiated my <b>6 lakh</b> loan down to <b>2.5 lakh</b>. I can finally sleep now.`,
     },
     {
       name: "Rina D'souza",
       location: "Kochi, Kerala",
-      avatar: "https://randomuser.me/api/portraits/women/65.jpg",
+      avatar: "/avatar/image5.png",
       text: `Recovery agents embarrassed me in front of my neighbors. This team handled everything, and I only had to pay <b>1 lakh</b> out of my <b>2.5 lakh</b> loan.`,
     },
     {
       name: "Ayesha Khan",
       location: "Pune, Maharashtra",
-      avatar: "https://randomuser.me/api/portraits/women/75.jpg",
+      avatar: "/avatar/image4.png",
       text: `The agents were calling me every hour. I’m thankful they stopped the calls and got my <b>4 lakh</b> bill settled for <b>1.5 lakh</b>.`,
     },
   ];

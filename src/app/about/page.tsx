@@ -129,8 +129,7 @@ const Services = () => {
           </h2>
           <p>
             At Resolve360, our mission is to help individuals overcome financial
-            challenges and reclaim their peace of mind. Using AI-powered
-            insights and expert legal guidance, we provide tailored solutions
+            challenges and reclaim their peace of mind. we provide tailored solutions
             for loan settlements and recovery agent harassment.
           </p>
           <p>

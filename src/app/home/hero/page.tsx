@@ -9,8 +9,8 @@ import Modal from "../../Components/ContactFormModal";
 const Section = styled.section`
   position: relative;
   width: 100%;
-  min-height: 90vh;
-  padding: 3rem 70px;
+  min-height: 95vh;
+  padding: 4rem 70px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -33,7 +33,7 @@ const BackgroundImage = styled.div<{ activeIndex: number }>`
   top: 0;
   left: 0;
   width: 100%;
-  height: 90vh;
+  height: 95vh;
   overflow: hidden;
   z-index: -2;
 
@@ -120,7 +120,7 @@ const CTAButton = styled(motion.button)`
 const FeaturesContainer = styled.div`
   margin: 5rem 0;
   width: 100%;
-  max-width: auto; /* ✅ container width limit (optional) */
+  max-width: auto; 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
 `;
@@ -254,8 +254,8 @@ const HomeSection: React.FC = () => {
              {/* Features Section */}
               <FeaturesContainer>
                 <Feature>Anti Harassment Services</Feature>
-                <Feature>Reduce Your Debt by Up to 60%</Feature>
-                <Feature>Legal Support</Feature>
+                <Feature>Reduce Your Debt by Up to 70%</Feature>
+                <Feature>Integrated Legal Services</Feature>
                 <Feature>Tailored Solutions for Your Needs</Feature>
               </FeaturesContainer>
           </CarouselSlide>
@@ -263,12 +263,11 @@ const HomeSection: React.FC = () => {
           {/* Slide 2 */}
           <CarouselSlide>
             <Content>
-              <Title>FQUANTIVA FINANCIAL CONSULTANCY PRIVATE LIMITED</Title>
+              <Title>QUANTIVA FINANCIAL CONSULTANCY PRIVATE LIMITED</Title>
               <Subtitle>CIN: U66190KA2025PTC205922</Subtitle>
               <Subtitle>GSTIN: 29ABCDE1234F1Z5</Subtitle>
               <Subtitle>
-                Om Chambers, 648/A, 4th Floor, Binnamangala, Indiranagar,
-                Bangalore North, Bangalore- 560038
+                Banglore & Gurgaon
               </Subtitle>
             </Content>
           </CarouselSlide>

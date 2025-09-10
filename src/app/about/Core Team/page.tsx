@@ -130,7 +130,7 @@ const Services = () => {
             Core Team: <span>Expertise You Can Trust</span>
           </h2>
           <p>
-            Resolve360 is led by a dynamic team of <strong>IIT and BIT graduates</strong>, bringing over 20 years of experience in building innovative businesses and creating impactful solutions.
+            Resolve360 is led by a dynamic team of <strong> professionals</strong>, bringing over 20 years of experience in building innovative businesses and creating impactful solutions.
           </p>
           <p>
             Our founder, <strong>Mr. Vipin Choudhary</strong>, adds over <strong>20 years of legal expertise</strong> to the team. His deep understanding of debt resolution laws and unwavering commitment to client rights form the backbone of our services.

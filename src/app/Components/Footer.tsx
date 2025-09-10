@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
 import {
   FooterContainer,
   LeftSection,
@@ -30,28 +31,46 @@ export default function Footer() {
         >
           <LeftSection>
             <Link href="/" passHref>
-              <FooterLogo src="FLogo.png" alt="Logo" />
+              <FooterLogo src="/FLogo.png" alt="Logo" />
             </Link>
             <h3>Resove360 Across India</h3> <br />
-            <p>
+            {/* <p>
               Led by Advocate Vipin Choudhary Transparent. Ethical. Always on your side.
-            </p>
+            </p> */}
             <SocialIconsWrapper>
   <h3 className="text-lg font-semibold text-gray-800 mb-2">Follow Us</h3>
-  <SocialIcons>
-    <a 
-      href="https://www.linkedin.com/company/resolve-360/" 
-      target="_blank" 
-      rel="noopener noreferrer"
-    >
-      <img 
-        src="linkedin1.png" 
-        alt="LinkedIn" 
-        className="w-6 h-6 hover:scale-110 transition-transform duration-200" 
-      />
-    </a>
-    {/* Add more social icons here */}
-  </SocialIcons>
+<SocialIcons>
+  {/* LinkedIn */}
+  <a 
+    href="https://www.linkedin.com/company/resolve-360/" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="text-[#FFFFFF] hover:scale-110 transition-transform duration-200"
+  >
+    <FaLinkedin size={28} />
+  </a>
+
+  {/* Instagram */}
+  <a 
+    href="https://www.instagram.com/resolve.360/"  
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="text-[#FFFFFF] hover:scale-110 transition-transform duration-200"
+  >
+    <FaInstagram size={28} />
+  </a>
+
+  {/* Facebook */}
+  <a 
+    href="https://www.facebook.com/people/Resolve360/61571324170070/" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="text-[#FFFFFF] hover:scale-110 transition-transform duration-200"
+  >
+    <FaFacebook size={28} />
+  </a>
+</SocialIcons>
+
 </SocialIconsWrapper>
           </LeftSection>
         </motion.div>

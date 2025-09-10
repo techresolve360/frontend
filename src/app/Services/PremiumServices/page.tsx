@@ -5,25 +5,26 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 const Section = styled.section`
-  padding: 40px 70px;
+  padding: 60px 70px;
   background: #ffffff;
   background-image: url("/RBG.png");
   background-size: cover;
   background-position: center;
 
   @media (max-width: 1024px) {
-    padding: 30px 40px;
+    padding: 40px 40px;
   }
 
   @media (max-width: 768px) {
-    padding: 25px 20px;
+    padding: 30px 20px;
+  }
 `;
 
 const Heading = styled.h2`
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 800;
   color: #000;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   text-align: start;
   font-family: 'Poppins', sans-serif;
 
@@ -32,50 +33,36 @@ const Heading = styled.h2`
   }
 `;
 
-
 const Subheading = styled.p`
   font-size: 1.1rem;
-  color: #222;
-  margin-bottom: 30px;
+  color: #333;
+  margin-bottom: 40px;
   text-align: start;
   font-family: 'Poppins', sans-serif;
 `;
 
-
-const CardsContainer = styled.div`
+// NEW GRID WRAPPER
+const CardGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Always 3 columns on large screens */
-  gap: 20px;
-  align-items: stretch;
-
-  @media (max-width: 1024px) {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
-  }
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
 
   @media (max-width: 768px) {
-    grid-template-columns: 1fr; /* 1 column on mobile */
-  }
-
-  @media (max-width: 480px) {
-    gap: 15px;
+    grid-template-columns: 1fr;
   }
 `;
 
-
-const Card = styled.div`
+const ServiceCard = styled(motion.div)`
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+  padding: 25px 20px;
+  font-family: 'Poppins', sans-serif;
   text-align: start;
   transition: transform 0.2s ease;
-  height: 100%;
-  font-family: 'Poppins', sans-serif;
 
   &:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
   }
 `;
 
@@ -97,23 +84,17 @@ const Divider = styled.div`
   margin: 8px 0;
 `;
 
-const StatContent = styled.div`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-`;
-
-const StatTitle = styled.div`
+const ServiceTitle = styled.h3`
   font-size: clamp(1rem, 1.5vw + 0.5rem, 1.2rem);
   font-weight: 700;
   color: #000;
   margin-bottom: 10px;
 `;
 
-const StatDesc = styled.div`
-  font-size: clamp(0.85rem, 1vw + 0.4rem, 0.95rem);
-  color: #333;
-  flex-grow: 1;
+const ServiceDesc = styled.div`
+  font-size: 0.95rem;
+  color: #222;
+  line-height: 1.6;
 
   ul {
     padding-left: 20px;
@@ -126,62 +107,93 @@ const StatDesc = styled.div`
   }
 
   p {
-    margin: 0;
+    margin: 0 0 12px 0;
   }
 `;
 
-export default function CyberFraudStats() {
+export default function PremiumServices() {
   const services = [
     {
-      icon: "/icons/Communication.png",
-      title: "We handle the communication with the bank",
-      desc: [
-        "Borrower is not a wilful defaulter",
-        "Borrower has bonafide intentions",
-        "Borrower is not denying their obligation to repay (as it is all documented)",
-        "Borrower is facing temporary financial crisis and has inability to pay",
-      ],
-      delay: 0.0,
+      icon: "/icons/members.png",
+      title: "Declaration for Parents/Family Members",
+      desc: (
+        <ul>
+          <li>Declaration on our Legal Letterhead mentioning their name, age, medical ailment (if any), stating they are our clients, and they have not availed any Loan from the Banks. Hence, no visit or calls should be made to them demanding repayment.</li>
+          <li>Escalation Notice to Managing Director of the Bank if recovery agents demand repayment from your family in your absence.</li>
+          <li>Warning/Cease & Desist Notice not to harass family members in any manner.</li>
+          <li>Escalation to RBI Ombudsman / National Consumer Authority if harassment continues.</li>
+          <li>We provide a dedicated mobile number for family members to call; our legal team will intervene directly with the recovery agent.</li>
+          <li>Draft Police complaint and assistance for filing in worst case situations.</li>
+        </ul>
+      ),
     },
     {
-      icon: "/icons/Demand.png",
-      title: "We handle your legal/demands from your lender",
-      desc: [
-        "lorem lorem lorem lorem lorem lorem.",
-        "lorem lorem lorem lorem lorem lorem.",
-        "lorem lorem lorem lorem lorem lorem.",
-        "lorem lorem lorem lorem lorem lorem.",
-      ],
-      delay: 0.1,
+      icon: "/icons/RBI.png",
+      title: "Intimation Notice & Replies to Demand Notices",
+      desc: (
+        <>
+          <p>• Issue Intimation & Moratorium Notice to all lenders, placing on record that Client:</p>
+          <ul>
+            <li>is not a wilful defaulter</li>
+            <li>has bonafide intentions</li>
+            <li>is not denying obligation to repay</li>
+            <li>is facing temporary financial hardships</li>
+          </ul>
+          <p>• Reply to all demand notices from lenders, whether by draft reply (email) or on lawyer letterhead through RPAD.</p>
+          <p>• Consultant will issue replies to all notices until settlement is complete.</p>
+        </>
+      ),
     },
     {
-      icon: "/icons/Harassment.png",
-      title: "We free you from Anti-Harassment calls",
-      desc: [
-        "lorem lorem lorem lorem lorem lorem.",
-        "lorem lorem lorem lorem lorem lorem.",
-        "lorem lorem lorem lorem lorem lorem.",
-        "lorem lorem lorem lorem lorem lorem.",
-      ],
-      delay: 0.2,
+      icon: "/icons/Forward.png",
+      title: "Recovery Agent Home Visit – Anti-Harassment Service",
+      desc: (
+        <ul>
+          <li>Draft Preferred Location Notice prohibiting home/office visits and restricting to agreed public location.</li>
+          <li>If agents visit home despite notice: install CCTV, politely ask details, furnish all notices/replies, and forward recordings.</li>
+          <li>Warning/Cease & Desist Notice issued to lenders if harassment persists.</li>
+          <li>Escalation to RBI Ombudsman / National Consumer Authority if needed.</li>
+          <li>Dedicated mobile number provided for real-time intervention during harassment.</li>
+        </ul>
+      ),
     },
     {
-      icon: "/icons/Negotiate.png",
-      title: "We negotiate to get your mental peace and freedom",
-      desc: ["lorem lorem lorem lorem lorem lorem.", "lorem lorem lorem lorem lorem lorem."],
-      delay: 0.0,
+      icon: "/icons/agent.png",
+      title: "Recovery Agent Calls – Anti-Harassment Service",
+      desc: (
+        <ul>
+          <li>Client should obtain new number for daily use; old number stays active but on silent mode.</li>
+          <li>Return ~2 calls daily, record harassing/abusive calls.</li>
+          <li>Obtain caller’s name and bank details, forward recordings to Consultant.</li>
+          <li>Consultant issues violation notices and escalates if harassment persists.</li>
+        </ul>
+      ),
     },
     {
-      icon: "/icons/Financial.png",
-      title: "Gain your financial freedom to progress ahead",
-      desc: ["lorem lorem lorem lorem lorem lorem.", "lorem lorem lorem lorem lorem lorem."],
-      delay: 0.1,
+      icon: "/icons/mobnum.png",
+      title: "Dedicated Mobile Number for Anti-Harassment",
+      desc: (
+        <p>We will provide a dedicated mobile number. Client’s family members can call this number in case of harassment, and our legal team will speak to the recovery agent directly.</p>
+      ),
     },
     {
-      icon: "/icons/Peace.png",
-      title: "Peace of Mind",
-      desc: "You're not a criminal; you're simply going through a temporary financial crisis.",
-      delay: 0.2,
+      icon: "/icons/arbitration.png",
+      title: "Arbitration & Conciliation Proceedings",
+      desc: (
+        <p>We represent you in arbitration/conciliation proceedings initiated by lenders. Drafting replies, objections, written statements, rejoinders, appearances – end-to-end representation included. Offline representation in Bangalore & Gurgaon only.</p>
+      ),
+    },
+    {
+      icon: "/icons/HarassmentResolution.png",
+      title: "Settlement Negotiation",
+      desc: (
+        <ul>
+          <li>Assist Client in negotiating settlements when financially ready.</li>
+          <li>Handle settlements one lender at a time.</li>
+          <li>Client acknowledges settlements affect CIBIL score, which can be rebuilt post-settlement.</li>
+          <li>Endeavour to secure up to 70% waiver.</li>
+        </ul>
+      ),
     },
   ];
 
@@ -192,36 +204,22 @@ export default function CyberFraudStats() {
       </Heading>
       <Subheading>Tailored to deliver relief and peace of mind</Subheading>
 
-      <CardsContainer>
+      <CardGrid>
         {services.map((item, idx) => (
-          <motion.div
+          <ServiceCard
             key={idx}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: item.delay }}
+            transition={{ duration: 0.5, delay: idx * 0.1 }}
           >
-            <Card>
-              <Icon src={item.icon} alt={`Icon ${idx + 1}`} />
-              <Divider />
-              <StatContent>
-                <StatTitle>{item.title}</StatTitle>
-                <StatDesc>
-                  {Array.isArray(item.desc) ? (
-                    <ul>
-                      {item.desc.map((point, index) => (
-                        <li key={index}>{point}</li>
-                      ))}
-                    </ul>
-                  ) : (
-                    <p>{item.desc}</p>
-                  )}
-                </StatDesc>
-              </StatContent>
-            </Card>
-          </motion.div>
+            <Icon src={item.icon} alt={`Icon ${idx + 1}`} />
+            <Divider />
+            <ServiceTitle>{item.title}</ServiceTitle>
+            <ServiceDesc>{item.desc}</ServiceDesc>
+          </ServiceCard>
         ))}
-      </CardsContainer>
+      </CardGrid>
     </Section>
   );
 }
