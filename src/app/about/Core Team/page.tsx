@@ -106,8 +106,19 @@ const CardName = styled.h3`
   font-family: 'poppins', sans-serif;
   font-weight: 600;
   font-size: 20px;
-  padding: 16px 0 8px 16px;
+  padding: 16px 0 0px 16px;
   color: #111827;
+`;
+
+const CardDescriptions = styled.p`
+  font-family: 'poppins', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: start;
+  color: #0084C7;
+  padding: 0 16px;
+  margin-bottom: 10px;
+  line-height: 1.4;
 `;
 
 const CardDescription = styled.p`
@@ -162,7 +173,7 @@ const Services = () => {
             <Card key={i}>
               <CardImage src={member.img} alt={member.name} />
               <CardName>{member.name}</CardName>
-              <CardDescription>{member.desc}</CardDescription>
+              <CardDescriptions>{member.desc}</CardDescriptions>
             </Card>
           ))}
         </CardsGrid>
@@ -182,80 +193,80 @@ const Services = () => {
                 img: "/sakshi.png", 
                 name: "Sakshi Rai", 
                 desc: "Gurugram, Haryana",
-                lang: "Languages Known- Hindi, English" 
+                lang: " Hindi, English" 
             },
             { 
                 img: "/savan.png", 
                 name: "Savan Chauhan", 
                 desc: "Ahmedabad/Gandhinagar Gujarat",
-                lang: "Languages Known- Hindi, English, Gujarati"
+                lang: " Hindi, English, Gujarati"
             },
             { 
                 img: "/pritam.jpeg", 
                 name: "Pritam Patel",
                 desc: "Surat, Gujarat" ,
-                lang: "Languages Known- Hindi, English, Gujarati"
+                lang: " Hindi, English, Gujarati"
             },
             { 
                 img: "/pinky.jpeg", 
                 name: "Pinky Singh", 
                 desc: "Hyderabad / Telangana",
-                lang: "Languages Known- Hindi, English, Telugu"
+                lang: " Hindi, English, Telugu"
             },
             { 
                 img: "/santosh.jpeg", 
                 name: "Santosh Balekundri", 
                 desc: "Belagavi, Karnataka",
-                lang: "Languages Known- Kannada, Hindi, English, Marathi"
+                lang: " Kannada, Hindi, English, Marathi"
             },    
             {
                 img: "/jayesh.jpeg",
                 name: "Jayesh Parmar",
                 desc: "Vadodara, Gujarat",
-                lang: "Languages Known- Hindi, English, Gujarati"
+                lang: " Hindi, English, Gujarati"
             },
             { 
                 img: "/sanjay.jpeg", 
                 name: "Sanjay Sharma", 
                 desc: "BHOPAL, Madhya Pradesh",
-                lang: "Languages Known- Hindi, English"
+                lang: " Hindi, English"
             },
             { 
                 img: "/shravani.jpeg", 
                 name: "Shravani Ram", 
                 desc: "Kolar Karnataka",
-                lang: "Languages Known- Kannada, Telugu, English"
+                lang: " Kannada, Telugu, English"
             },
             {
                 img: "/saniya.jpeg",
                 name: "Shaik saniya Firdouse",
                 desc: "Hyderabad, Telangana",
-                lang: "Languages Known- Hindi, English, Telugu"
+                lang: " Hindi, English, Telugu"
             },
             { 
                 img: "/kiran.jpeg", 
                 name: "Kiran Naidu", 
                 desc: "Hyderabad, Telangana",
-                lang: "Languages Known- Telugu, Hindi, English"
+                lang: " Telugu, Hindi, English"
             },    
             {
                 img: "/priyadharshini.jpeg",
                 name: "Priyadharshini Subramanian",
                 desc: "Bangalore, Karnataka",
-                lang: "Languages Known- Tamil, English, Hindi"
+                lang: " Tamil, English, Hindi"
             },
             { 
                 img: "/jitesh.jpeg",
                 name: "Jitesh Kotiya",
                 desc: "Pune, Maharastra",
-                lang: "Languages Known- Gujarati Hindi and English"
+                lang: " Gujarati Hindi and English"
             }
 
           ].map((member, i) => (
             <Card key={i}>
               <CardImage src={member.img} alt={member.name} />
               <CardName>{member.name}</CardName>
-              <CardDescription>{member.desc}</CardDescription>
+              <CardDescriptions>{member.desc}</CardDescriptions>
               <CardDescription>{member.lang}</CardDescription>
             </Card>
           ))}
