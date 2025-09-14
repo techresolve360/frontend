@@ -1,5 +1,6 @@
 "use client";
 
+import { desc } from "framer-motion/client";
 import React from "react";
 import styled from "styled-components";
 
@@ -142,25 +143,20 @@ const Services = () => {
 
         <CardsGrid>
           {[
-            { 
-                img: "/vipin.png", 
-                name: "Adv. Vipin Choudhary", 
-                desc: "20+ Years of experience in offering strategic, result-driven resolution to help you achieve financial freedom." 
+            {
+              img: "/vipin.png",
+              name: "Adv. Vipin Choudhary",
+              desc: "Founder",
             },
             { 
-                img: "/rupak.png", 
-                name: "Rupak Kumar", 
-                desc: "Project Manager, BIT Mesra Alumni, leading innovative solutions at Resolve360." 
+                img: "/mohith.png", 
+                name: "Mohith N", 
+                desc: "Operations Head" 
             },
             { 
-                img: "/prerna.png", 
-                name: "Prerna Shukla", 
-                desc: "Creative Head, BIT Mesra Alumni, driving strategies and delivering impactful solutions at Resolve360." 
-            },
-            { 
-                img: "/rishabh.png", 
-                name: "Rishabh", 
-                desc: "Software Engineer, IIT Kharagpur Alumni, Ex-Microsoft, innovating with advanced AI models." 
+                img: "/Dennis.jpeg", 
+                name: "Dennis", 
+                desc: "Senior Inside Sales Manager" 
             }
           ].map((member, i) => (
             <Card key={i}>
@@ -183,30 +179,84 @@ const Services = () => {
         <CardsGrid>
           {[
             { 
-                img: "/settlement1.png", 
-                name: "John Doe", 
-                desc: "Expert negotiator with 15+ years in financial settlements and client advocacy." 
+                img: "/sakshi.png", 
+                name: "Sakshi Rai", 
+                desc: "Gurugram, Haryana",
+                lang: "Languages Known- Hindi, English" 
             },
             { 
-                img: "/settlement2.png", 
-                name: "Jane Smith", 
-                desc: "Specializes in building client trust and delivering impactful resolution strategies." 
+                img: "/savan.png", 
+                name: "Savan Chauhan", 
+                desc: "Ahmedabad/Gandhinagar Gujarat",
+                lang: "Languages Known- Hindi, English, Gujarati"
             },
             { 
-                img: "/settlement3.png", 
-                name: "Arun Kumar",
-                desc: "Financial strategist with deep insight into debt resolution frameworks." 
+                img: "/pritam.jpeg", 
+                name: "Pritam Patel",
+                desc: "Surat, Gujarat" ,
+                lang: "Languages Known- Hindi, English, Gujarati"
             },
             { 
-                img: "/settlement4.png", 
-                name: "Priya Verma", 
-                desc: "Skilled in client communication and structured settlement planning." 
+                img: "/pinky.jpeg", 
+                name: "Pinky Singh", 
+                desc: "Hyderabad / Telangana",
+                lang: "Languages Known- Hindi, English, Telugu"
+            },
+            { 
+                img: "/santosh.jpeg", 
+                name: "Santosh Balekundri", 
+                desc: "Belagavi, Karnataka",
+                lang: "Languages Known- Kannada, Hindi, English, Marathi"
+            },    
+            {
+                img: "/jayesh.jpeg",
+                name: "Jayesh Parmar",
+                desc: "Vadodara, Gujarat",
+                lang: "Languages Known- Hindi, English, Gujarati"
+            },
+            { 
+                img: "/sanjay.jpeg", 
+                name: "Sanjay Sharma", 
+                desc: "BHOPAL, Madhya Pradesh",
+                lang: "Languages Known- Hindi, English"
+            },
+            { 
+                img: "/shravani.jpeg", 
+                name: "Shravani Ram", 
+                desc: "Kolar Karnataka",
+                lang: "Languages Known- Kannada, Telugu, English"
+            },
+            {
+                img: "/saniya.jpeg",
+                name: "Shaik saniya Firdouse",
+                desc: "Hyderabad, Telangana",
+                lang: "Languages Known- Hindi, English, Telugu"
+            },
+            { 
+                img: "/kiran.jpeg", 
+                name: "Kiran Naidu", 
+                desc: "Hyderabad, Telangana",
+                lang: "Languages Known- Telugu, Hindi, English"
+            },    
+            {
+                img: "/priyadharshini.jpeg",
+                name: "Priyadharshini Subramanian",
+                desc: "Bangalore, Karnataka",
+                lang: "Languages Known- Tamil, English, Hindi"
+            },
+            { 
+                img: "/jitesh.jpeg",
+                name: "Jitesh Kotiya",
+                desc: "Pune, Maharastra",
+                lang: "Languages Known- Gujarati Hindi and English"
             }
+
           ].map((member, i) => (
             <Card key={i}>
               <CardImage src={member.img} alt={member.name} />
               <CardName>{member.name}</CardName>
               <CardDescription>{member.desc}</CardDescription>
+              <CardDescription>{member.lang}</CardDescription>
             </Card>
           ))}
         </CardsGrid>
