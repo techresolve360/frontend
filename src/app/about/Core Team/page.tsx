@@ -155,12 +155,22 @@ const Services = () => {
         <CardsGrid>
           {[
             {
-              img: "/vipin.png",
+              img: "/vipin.jpg",
               name: "Adv. Vipin Choudhary",
               desc: "Founder",
             },
+            {
+              img: "/vikas.jpeg",
+              name: "Vikas Katoch",
+              desc: "Founder",
+            },
+            {
+              img: "/shruti.jpeg",
+              name: "Shruti",
+              desc: "General Counsel"
+            },
             { 
-                img: "/mohith.png", 
+                img: "/mohith.jpeg", 
                 name: "Mohith N", 
                 desc: "Operations Head" 
             },

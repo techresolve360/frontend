@@ -9,22 +9,30 @@ import Modal from "../../Components/ContactFormModal";
 const Section = styled.section`
   position: relative;
   width: 100%;
-  min-height: 95vh;
-  padding: 4rem 70px;
+  min-height: 100vh;
+  padding: 7rem 70px 4rem; /* top padding ensures title doesn't overlap navbar */
   display: flex;
   align-items: center;
   justify-content: flex-start;
   overflow: hidden;
 
+  @media (max-width: 1280px) {
+    padding: 6rem 50px 3rem;
+  }
+
   @media (max-width: 1024px) {
-    padding: 2.5rem 40px;
+    padding: 5rem 40px 3rem;
     flex-direction: column;
     justify-content: center;
+    min-height: auto;
   }
 
   @media (max-width: 768px) {
-    padding: 6rem 20px;
-    min-height: auto;
+    padding: 5.5rem 20px 3rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 5rem 16px 2.5rem;
   }
 `;
 
@@ -33,7 +41,7 @@ const BackgroundImage = styled.div<{ activeIndex: number }>`
   top: 0;
   left: 0;
   width: 100%;
-  height: 95vh;
+  height: 100vh;
   overflow: hidden;
   z-index: -2;
 
@@ -59,7 +67,7 @@ const BackgroundImage = styled.div<{ activeIndex: number }>`
 
 const Content = styled.div`
   position: relative;
-  margin: 7rem 0;
+  margin: 4rem 0;
   max-width: 950px;
   width: 100%;
   text-align: left;
@@ -68,42 +76,48 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  word-wrap: break-word;
 
   @media (max-width: 1024px) {
+    margin: 2rem 0;
     max-width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    margin: 1.5rem 0;
   }
 `;
 
 const Title = styled.h1`
-  font-size: 3rem;
+  font-size: clamp(1.6rem, 4vw, 3rem); /* responsive font */
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   color: #fff;
-  line-height: 1.2;
-
-  @media (max-width: 1024px) {
-    font-size: 2.4rem;
-  }
+  line-height: 1.3;
+  word-break: break-word;
 
   @media (max-width: 768px) {
-    font-size: 1.8rem;
+    text-align: left;
   }
 `;
 
 const Subtitle = styled.p`
   margin-top: 15px;
-  font-size: 1.2rem;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
   font-family: "Lato", sans-serif;
   color: #dcdcdc;
+  line-height: 1.5;
 
   @media (max-width: 768px) {
-    font-size: 0.95rem;
+    margin-top: 10px;
   }
 `;
 
 const ButtonContainer = styled.div`
   margin-top: 25px;
   display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 `;
 
 const CTAButton = styled(motion.button)`
@@ -112,29 +126,33 @@ const CTAButton = styled(motion.button)`
   color: #fff;
   border: none;
   border-radius: 6px;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
+  white-space: nowrap;
 `;
 
 const FeaturesContainer = styled.div`
-  margin: 5rem 0;
+  margin: 3rem 0 2rem;
   width: 100%;
-  max-width: auto; 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+
+  @media (max-width: 768px) {
+    margin: 2rem 0;
+    justify-items: start; /* left align items */
+  }
 `;
 
 const Feature = styled.div`
-  padding: 1.5rem 1rem;
-  font-size: 1.7rem;
+  padding: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: #fff;
   text-align: center;
   background: transparent;
-  position: relative;
-
-  /* Divider line between items */
   border-right: 2px solid rgba(255, 255, 255, 0.3);
 
   &:last-child {
@@ -142,8 +160,7 @@ const Feature = styled.div`
   }
 
   @media (max-width: 768px) {
-    font-size: 1.2rem;
-    padding: 1rem 0;
+    text-align: left;
     border-right: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
@@ -165,18 +182,35 @@ const SlideWrapper = styled(motion.div)`
   width: 200%;
 `;
 
-const CarouselSlide = styled.div`
+const CarouselSlide = styled.div<{ centerContent?: boolean }>`
   width: 100%;
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: ${({ centerContent }) =>
+    centerContent ? "center" : "flex-start"};
+  align-items: flex-start;
+  padding-top: ${({ centerContent }) => (centerContent ? "0" : "4rem")};
+
+  @media (max-width: 768px) {
+    padding-top: ${({ centerContent }) => (centerContent ? "0" : "6rem")};
+    justify-content: ${({ centerContent }) =>
+      centerContent ? "center" : "flex-start"};
+    min-height: ${({ centerContent }) => (centerContent ? "70vh" : "auto")};
+  }
 `;
 
 const DotsContainer = styled.div`
   position: absolute;
-  bottom: 30px;
+  bottom: 60px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   gap: 10px;
+
+  @media (max-width: 768px) {
+    bottom: 30px;
+  }
 `;
 
 const Dot = styled(motion.div)<{ active: boolean }>`
@@ -236,7 +270,7 @@ const HomeSection: React.FC = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <Title>
-                India Most Trusted Services for Loan Settlement & Anti-Harassment
+                India’s Most Trusted Services for Loan Settlement & Anti-Harassment
               </Title>
               <Subtitle>
                 Stop harassment, settle loans, and achieve peace of mind
@@ -251,24 +285,23 @@ const HomeSection: React.FC = () => {
                 </CTAButton>
               </ButtonContainer>
             </Content>
-             {/* Features Section */}
-              <FeaturesContainer>
-                <Feature>Anti Harassment Services</Feature>
-                <Feature>Reduce Your Debt by Up to 70%</Feature>
-                <Feature>Integrated Legal Services</Feature>
-                <Feature>Tailored Solutions for Your Needs</Feature>
-              </FeaturesContainer>
+
+            {/* Features Section */}
+            <FeaturesContainer>
+              <Feature>Anti Harassment Services</Feature>
+              <Feature>Reduce Your Debt by Up to 70%</Feature>
+              <Feature>Integrated Legal Services</Feature>
+              <Feature>Tailored Solutions for Your Needs</Feature>
+            </FeaturesContainer>
           </CarouselSlide>
 
-          {/* Slide 2 */}
-          <CarouselSlide>
+          {/* Slide 2 - Centered */}
+          <CarouselSlide centerContent>
             <Content>
               <Title>QUANTIVA FINANCIAL CONSULTANCY PRIVATE LIMITED</Title>
               <Subtitle>CIN: U66190KA2025PTC205922</Subtitle>
               <Subtitle>GSTIN: 29ABCDE1234F1Z5</Subtitle>
-              <Subtitle>
-                Banglore & Gurgaon
-              </Subtitle>
+              <Subtitle>Bangalore & Gurgaon</Subtitle>
             </Content>
           </CarouselSlide>
         </SlideWrapper>
