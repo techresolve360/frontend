@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { IoClose } from "react-icons/io5";
+import { FiPhoneCall } from "react-icons/fi"; 
+import { IoClose, IoChevronDown } from "react-icons/io5";
 import {
   Overlay,
   ModalContainer,
@@ -11,6 +12,11 @@ import {
   Input,
   Textarea,
   SubmitButton,
+  HighlightNumber,
+  Dropdown,
+  DropdownList,
+  DropdownItem,
+  DropdownHeader,
 } from "../Styles/Modal.styles";
 
 export interface ModalProps {
@@ -19,17 +25,34 @@ export interface ModalProps {
 }
 
 const ErrorText = {
-  color: "#b22222",
-  fontSize: "0.95rem",
-  marginTop: "4px",
+  color: "#e63946",
+  fontSize: "0.85rem",
+  marginTop: "-8px",
+  marginBottom: "10px",
   display: "block",
 };
+
+const languages = [
+  "English",
+  "Hindi",
+  "Tamil",
+  "Malayalam",
+  "Telugu",
+  "Kannada",
+  "Bengali",
+  "Gujrati",
+  "Odia",
+  "Marathi",
+];
 
 const ContactFormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   const [fullName, setFullName] = useState("");
   const [phone, setPhone] = useState("");
   const [loanAmount, setLoanAmount] = useState("");
   const [message, setMessage] = useState("");
+  const [preferredLanguage, setPreferredLanguage] = useState("");
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [callTime, setCallTime] = useState("");
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -63,11 +86,18 @@ const ContactFormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
       setIsSubmitting(true);
 
       setTimeout(() => {
-        console.log({ fullName, phone, loanAmount, message });
+        console.log({
+          fullName,
+          phone,
+          loanAmount,
+          message,
+          preferredLanguage,
+          callTime,
+        });
         alert("Form submitted successfully!");
         setIsSubmitting(false);
         onClose();
-      }, 1500);
+      }, 1200);
     }
   };
 
@@ -83,7 +113,7 @@ const ContactFormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         <Label>Full Name</Label>
         <Input
           type="text"
-          placeholder="Your full name *"
+          placeholder="Enter your name *"
           value={fullName}
           onChange={(e) => setFullName(e.target.value)}
         />
@@ -92,7 +122,7 @@ const ContactFormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         <Label>Phone Number</Label>
         <Input
           type="text"
-          placeholder="Phone Number *"
+          placeholder="10-digit mobile *"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
         />
@@ -101,19 +131,57 @@ const ContactFormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         <Label>Total Outstanding of Personal Loan/Credit Card</Label>
         <Input
           type="text"
-          placeholder="Total Loan Amount *"
+          placeholder="Loan Amount *"
           value={loanAmount}
           onChange={(e) => setLoanAmount(e.target.value)}
         />
         {errors.loanAmount && <span style={ErrorText}>{errors.loanAmount}</span>}
 
-        <Label>Message</Label>
+        <Label>
+          Message <span style={{ fontWeight: 400 }}>(Optional)</span>
+        </Label>
         <Textarea
-          rows={4}
-          placeholder="Write a message! (Optional)"
+          rows={2}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         />
+
+        <Label>Preferred Language</Label>
+        <Dropdown>
+          <DropdownHeader onClick={() => setDropdownOpen(!dropdownOpen)}>
+            {preferredLanguage || "Select Language"}
+            <IoChevronDown size={18} />
+          </DropdownHeader>
+          {dropdownOpen && (
+            <DropdownList>
+              {languages.map((lang, index) => (
+                <DropdownItem
+                  key={index}
+                  onClick={() => {
+                    setPreferredLanguage(lang);
+                    setDropdownOpen(false);
+                  }}
+                >
+                  {lang}
+                </DropdownItem>
+              ))}
+            </DropdownList>
+          )}
+        </Dropdown>
+
+        <Label>How soon you want us to call you</Label>
+        <Input
+          type="text"
+          placeholder="e.g. Within 1 hour"
+          value={callTime}
+          onChange={(e) => setCallTime(e.target.value)}
+        />
+
+        <HighlightNumber>
+          <FiPhoneCall size={16} />
+          <span>Save our number: <strong>+91 70444 32779</strong></span>
+        </HighlightNumber>
+
 
         <SubmitButton onClick={handleSubmit} disabled={isSubmitting}>
           {isSubmitting ? "Submitting..." : "Submit"}
