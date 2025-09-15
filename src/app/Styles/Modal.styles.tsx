@@ -158,7 +158,7 @@ export const HighlightNumber = styled.div`
   gap: 8px;
 
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 400;
   background: #f1f5f9;
   border-radius: 7px;
   color: #2563eb;
