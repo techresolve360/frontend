@@ -10,7 +10,6 @@ import {
   Title,
   Label,
   Input,
-  Textarea,
   SubmitButton,
   HighlightNumber,
   Dropdown,
@@ -45,14 +44,25 @@ const languages = [
   "Marathi",
 ];
 
+const callTimes = [
+  "Immediately",
+  "Within 6 hours",
+  "Today (by end of day)",
+  "Tomorrow",
+  "2–3 days",
+  "Within 1 week",
+  "Within 2 weeks",
+  "Flexible / Not decided yet",
+];
+
 const ContactFormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   const [fullName, setFullName] = useState("");
   const [phone, setPhone] = useState("");
   const [loanAmount, setLoanAmount] = useState("");
-  const [message, setMessage] = useState("");
   const [preferredLanguage, setPreferredLanguage] = useState("");
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [languageDropdownOpen, setLanguageDropdownOpen] = useState(false);
   const [callTime, setCallTime] = useState("");
+  const [callTimeDropdownOpen, setCallTimeDropdownOpen] = useState(false);
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -61,21 +71,13 @@ const ContactFormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   const validate = () => {
     let newErrors: { [key: string]: string } = {};
 
-    if (!fullName.trim()) {
-      newErrors.fullName = "Full name is required";
-    }
+    if (!fullName.trim()) newErrors.fullName = "Full name is required";
 
-    if (!phone.trim()) {
-      newErrors.phone = "Phone number is required";
-    } else if (!/^\d{10}$/.test(phone)) {
-      newErrors.phone = "Phone number must be 10 digits";
-    }
+    if (!phone.trim()) newErrors.phone = "Phone number is required";
+    else if (!/^\d{10}$/.test(phone)) newErrors.phone = "Phone number must be 10 digits";
 
-    if (!loanAmount.trim()) {
-      newErrors.loanAmount = "Loan amount is required";
-    } else if (isNaN(Number(loanAmount))) {
-      newErrors.loanAmount = "Loan amount must be a number";
-    }
+    if (!loanAmount.trim()) newErrors.loanAmount = "Loan amount is required";
+    else if (isNaN(Number(loanAmount))) newErrors.loanAmount = "Loan amount must be a number";
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -84,13 +86,11 @@ const ContactFormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   const handleSubmit = () => {
     if (validate()) {
       setIsSubmitting(true);
-
       setTimeout(() => {
         console.log({
           fullName,
           phone,
           loanAmount,
-          message,
           preferredLanguage,
           callTime,
         });
@@ -137,29 +137,20 @@ const ContactFormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         />
         {errors.loanAmount && <span style={ErrorText}>{errors.loanAmount}</span>}
 
-        <Label>
-          Message <span style={{ fontWeight: 400 }}>(Optional)</span>
-        </Label>
-        <Textarea
-          rows={2}
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-        />
-
         <Label>Preferred Language</Label>
         <Dropdown>
-          <DropdownHeader onClick={() => setDropdownOpen(!dropdownOpen)}>
+          <DropdownHeader onClick={() => setLanguageDropdownOpen(!languageDropdownOpen)}>
             {preferredLanguage || "Select Language"}
             <IoChevronDown size={18} />
           </DropdownHeader>
-          {dropdownOpen && (
+          {languageDropdownOpen && (
             <DropdownList>
-              {languages.map((lang, index) => (
+              {languages.map((lang, idx) => (
                 <DropdownItem
-                  key={index}
+                  key={idx}
                   onClick={() => {
                     setPreferredLanguage(lang);
-                    setDropdownOpen(false);
+                    setLanguageDropdownOpen(false);
                   }}
                 >
                   {lang}
@@ -169,19 +160,36 @@ const ContactFormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           )}
         </Dropdown>
 
-        <Label>How soon you want us to call you</Label>
-        <Input
-          type="text"
-          placeholder="e.g. Within 1 hour"
-          value={callTime}
-          onChange={(e) => setCallTime(e.target.value)}
-        />
+        <Label>So you don’t miss our call</Label>
+        <Dropdown>
+          <DropdownHeader onClick={() => setCallTimeDropdownOpen(!callTimeDropdownOpen)}>
+            {callTime || "Select Call Time"}
+            <IoChevronDown size={18} />
+          </DropdownHeader>
+          {callTimeDropdownOpen && (
+            <DropdownList>
+              {callTimes.map((time, idx) => (
+                <DropdownItem
+                  key={idx}
+                  onClick={() => {
+                    setCallTime(time);
+                    setCallTimeDropdownOpen(false);
+                  }}
+                >
+                  {time}
+                </DropdownItem>
+              ))}
+            </DropdownList>
+          )}
+        </Dropdown>
 
         <HighlightNumber>
           <FiPhoneCall size={16} />
           <span>Save our number: <strong>+91 70444 32779</strong></span>
         </HighlightNumber>
 
+        
+        
 
         <SubmitButton onClick={handleSubmit} disabled={isSubmitting}>
           {isSubmitting ? "Submitting..." : "Submit"}
