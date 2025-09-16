@@ -166,7 +166,7 @@ const Services = () => {
             },
             {
               img: "/shruti.jpeg",
-              name: "Shruti",
+              name: "M. Shruthi Karumbaiah",
               desc: "General Counsel"
             },
             { 
