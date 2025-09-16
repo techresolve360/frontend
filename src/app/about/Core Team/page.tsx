@@ -160,9 +160,9 @@ const Services = () => {
               desc: "Founder",
             },
             {
-              img: "/vikas.jpeg",
+              img: "/vikas1.jpg",
               name: "Vikas Katoch",
-              desc: "Founder",
+              desc: "Co-Founder",
             },
             {
               img: "/shruti.jpeg",
