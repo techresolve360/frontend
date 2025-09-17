@@ -241,12 +241,6 @@ const Services = () => {
                 desc: "BHOPAL, Madhya Pradesh",
                 lang: " Hindi, English"
             },
-            { 
-                img: "/shravani.jpeg", 
-                name: "Shravani Ram", 
-                desc: "Kolar Karnataka",
-                lang: " Kannada, Telugu, English"
-            },
             {
                 img: "/saniya.jpeg",
                 name: "Shaik saniya Firdouse",

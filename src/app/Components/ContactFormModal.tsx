@@ -102,7 +102,7 @@ const ContactFormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   };
 
   return (
-    <Overlay>
+    <Overlay id="contact">
       <ModalContainer>
         <CloseButton onClick={onClose}>
           <IoClose />
@@ -187,9 +187,6 @@ const ContactFormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           <FiPhoneCall size={16} />
           <span>Save our number: <strong>+91 70444 32779</strong></span>
         </HighlightNumber>
-
-        
-        
 
         <SubmitButton onClick={handleSubmit} disabled={isSubmitting}>
           {isSubmitting ? "Submitting..." : "Submit"}
