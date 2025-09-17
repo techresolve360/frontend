@@ -1,26 +1,28 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/navigation"; 
 import ContactFormModal from "../Components/ContactFormModal"; 
 
 const Page = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
-    // Always open the modal directly when page loads
+   
     setIsModalOpen(true);
-
-    // OR: If you only want when #contact is in URL, use this:
-    // if (window.location.hash === "#contact") {
-    //   setIsModalOpen(true);
-    // }
   }, []);
+
+  const handleClose = () => {
+    setIsModalOpen(false);
+    router.push("/"); 
+  };
 
   return (
     <div>
       <ContactFormModal
         isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
+        onClose={handleClose}
       />
     </div>
   );
