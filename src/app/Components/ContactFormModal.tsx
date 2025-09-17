@@ -160,7 +160,7 @@ const ContactFormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           )}
         </Dropdown>
 
-        <Label>So you don’t miss our call</Label>
+        <Label>When do you want us to connect</Label>
         <Dropdown>
           <DropdownHeader onClick={() => setCallTimeDropdownOpen(!callTimeDropdownOpen)}>
             {callTime || "Select Call Time"}
@@ -183,6 +183,7 @@ const ContactFormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           )}
         </Dropdown>
 
+        <Label style={{ color: 'red', fontSize:'14px', fontWeight: '600', textAlign: 'center', marginBottom:'-6px' }}>So you don't miss our call !!</Label>
         <HighlightNumber>
           <FiPhoneCall size={16} />
           <span>Save our number: <strong>+91 70444 32779</strong></span>
