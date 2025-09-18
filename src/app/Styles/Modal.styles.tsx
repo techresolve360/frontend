@@ -10,6 +10,10 @@ export const Overlay = styled.div`
   align-items: center;
   z-index: 1000;
   padding: 16px;
+
+  @media (max-width: 600px) {
+    padding: 12px;
+  }
 `;
 
 export const ModalContainer = styled.div`
@@ -33,6 +37,15 @@ export const ModalContainer = styled.div`
       transform: translateY(0);
     }
   }
+
+  @media (max-width: 480px) {
+    max-width: 95%;
+    padding: 18px 16px;
+  }
+
+  @media (max-width: 360px) {
+    padding: 14px 12px;
+  }
 `;
 
 export const CloseButton = styled.button`
@@ -54,6 +67,14 @@ export const CloseButton = styled.button`
   &:hover {
     background: #e2e8f0;
   }
+
+  @media (max-width: 360px) {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+    top: 10px;
+    right: 10px;
+  }
 `;
 
 export const Title = styled.h2`
@@ -62,6 +83,16 @@ export const Title = styled.h2`
   text-align: center;
   margin-bottom: 18px;
   color: #1e293b;
+
+  @media (max-width: 480px) {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
 `;
 
 export const Label = styled.label`
@@ -70,6 +101,11 @@ export const Label = styled.label`
   font-weight: 500;
   margin-bottom: 5px;
   color: #475569;
+
+  @media (max-width: 360px) {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
 `;
 
 export const Input = styled.input`
@@ -89,6 +125,16 @@ export const Input = styled.input`
   &:focus {
     border-color: #2563eb;
     box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  @media (max-width: 360px) {
+    padding: 8px 10px;
+    font-size: 12px;
   }
 `;
 
@@ -112,6 +158,16 @@ export const Textarea = styled.textarea`
     border-color: #2563eb;
     box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
   }
+
+  @media (max-width: 480px) {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  @media (max-width: 360px) {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
 `;
 
 export const Dropdown = styled.div`
@@ -134,6 +190,16 @@ export const DropdownHeader = styled.div`
 
   &:hover {
     border-color: #cbd5e1;
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  @media (max-width: 360px) {
+    padding: 8px 10px;
+    font-size: 12px;
   }
 `;
 
@@ -163,6 +229,16 @@ export const DropdownItem = styled.li`
   &:hover {
     background: #f1f5f9;
   }
+
+  @media (max-width: 480px) {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  @media (max-width: 360px) {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
 `;
 
 export const HighlightNumber = styled.div`
@@ -185,6 +261,16 @@ export const HighlightNumber = styled.div`
   svg {
     flex-shrink: 0;
   }
+
+  @media (max-width: 480px) {
+    font-size: 13px;
+    padding: 10px 14px;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
 `;
 
 export const SubmitButton = styled.button`
@@ -202,5 +288,15 @@ export const SubmitButton = styled.button`
   &:hover {
     background: #1d4ed8;
     transform: translateY(-1px);
+  }
+
+  @media (max-width: 480px) {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  @media (max-width: 360px) {
+    padding: 10px;
+    font-size: 13px;
   }
 `;
