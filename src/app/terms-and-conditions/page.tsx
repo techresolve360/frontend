@@ -133,7 +133,7 @@ export default function TermsAndConditions() {
               agents.
             </li>
             <li>
-              <strong>Scope of Service:</strong> Our role is advisory and facilitative; we do not provide financial loans. Kindly delete the last part or guarantee settlement outcomes.
+              <strong>Scope of Service:</strong> Our role is advisory and facilitative; we do not provide financial loans.
             </li>
           </List>
         </Section>
