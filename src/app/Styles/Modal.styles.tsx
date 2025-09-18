@@ -242,12 +242,12 @@ export const DropdownItem = styled.li`
 `;
 
 export const HighlightNumber = styled.div`
-  margin: 14px 0;
+  margin: 14px auto; 
   padding: 12px 16px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
+  justify-content: center;  
+  align-items: center;      
+  gap: 10px;
 
   font-size: 14px;
   font-weight: 500;
@@ -255,11 +255,15 @@ export const HighlightNumber = styled.div`
   border-radius: 10px;
   color: #2563eb;
   border: 1px dashed #2563eb;
-  line-height: 1.4;
+  line-height: 1.5;
   text-align: center;
 
   svg {
     flex-shrink: 0;
+  }
+
+  span {
+    display: block;
   }
 
   @media (max-width: 480px) {
@@ -272,6 +276,8 @@ export const HighlightNumber = styled.div`
     padding: 8px 12px;
   }
 `;
+
+
 
 export const SubmitButton = styled.button`
   width: 100%;

@@ -199,7 +199,7 @@ const ContactFormModal: React.FC<ModalProps> = ({ isOpen = true, onClose, mode =
       <HighlightNumber>
         <FiPhoneCall size={16} />
         <span>
-          Save our number: <strong>+91 70444 32779</strong>
+          Save our number: <br/><strong>+91 70444 32779</strong>
         </span>
       </HighlightNumber>
 
