@@ -263,7 +263,7 @@ export default function HelpAndFees() {
 
         <FeesSubText>
           <span>Simple. Transparent. Fair.</span>  
-          Start with just <Highlight>₹2999</Highlight> to access all services.  
+          Start with just <Highlight>₹3540</Highlight> to access all services.  
           <br />
           <em>You pay only when your loan is settled!</em>
         </FeesSubText>
