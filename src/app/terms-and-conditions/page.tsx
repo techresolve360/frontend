@@ -335,7 +335,7 @@ export default function TermsAndConditions() {
               </a>
             </p>
             <p>
-              Phone: <a href="tel:+917044432779">7044432779</a>
+              Phone: <a href="tel:+91 99004 75500">+91 99004 75500</a>
             </p>
             <p>
               Address: Baskara's Plaza, 2nd Floor, HSR Layout Sector 6, 560102,

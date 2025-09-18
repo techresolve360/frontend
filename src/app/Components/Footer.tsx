@@ -114,7 +114,7 @@ export default function Footer() {
             <a>Baskara's Plaza, 2nd Floor, HSR  Layout Sector 6, 560102, Karnataka, Bangalore</a>
 
             <p>Call</p>
-            <a>7044432779</a>
+            <a>+91 99004 75500</a>
 
             <p>Email</p>
             <a href="mailto:support@resolve360.in">support@resolve360.in</a>

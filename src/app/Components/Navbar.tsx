@@ -59,7 +59,7 @@ const Navbar = () => {
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
           <ContactButton>
             <img src="/callnow.png" alt="Call Icon" />
-            +91 70444 32779
+            +91 99004 75500
           </ContactButton>
           <EmailText href="mailto:support@resolve360.in">
             support@resolve360.in
@@ -77,10 +77,10 @@ const Navbar = () => {
 
         {/* Mobile Contact Section */}
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-          <a href="tel:+917044432779">
+          <a href="tel:+91 99004 75500">
             <ContactButton>
               <img src="/callnow.png" alt="Call Icon" />
-              +91 70444 32779
+              +91 99004 75500
             </ContactButton>
           </a>
           <EmailText href="mailto:support@resolve360.in">

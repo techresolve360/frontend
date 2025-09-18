@@ -208,7 +208,7 @@ export default function PrivacyPolicy() {
           <ContactInfo>
             <p><strong>Name:</strong> Resolve360</p>
             <p>Email: <a href="mailto:support@resolve360.in">support@resolve360.in</a></p>
-            <p>Phone: <a href="tel:+917044432779">7044432779</a></p>
+            <p>Phone: <a href="tel:+91 99004 75500">+91 99004 75500</a></p>
             <p>Address: Baskara's Plaza, 2nd Floor, HSR Layout Sector 6, 560102, Karnataka, Bangalore</p>
           </ContactInfo>
           <Paragraph>
@@ -223,7 +223,7 @@ export default function PrivacyPolicy() {
           </Paragraph>
           <ContactInfo>
             <p>Email: <a href="mailto:support@resolve360.in">support@resolve360.in</a></p>
-            <p>Phone: <a href="tel:+917044432779">7044432779</a></p>
+            <p>Phone: <a href="tel:+91 99004 75500">+91 99004 75500</a></p>
             <p>Address: Baskara's Plaza, 2nd Floor, HSR Layout Sector 6, 560102, Karnataka, Bangalore</p>
           </ContactInfo>
         </Section>
