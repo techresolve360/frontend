@@ -139,6 +139,13 @@ const FeeCard = styled.div`
     margin-bottom: 20px;
   }
 
+  span {
+  font-size: 18px;
+  font-weight: 400;
+    color: #00c4ff;
+    margin-bottom: 6px;
+  }
+
   @media (max-width: 768px) {
     padding: 30px 20px;
     h3 {
@@ -262,17 +269,17 @@ export default function HelpAndFees() {
         </FeesSubText>
 
         <FeeCard>
-          <h3>Start with ₹2999</h3>
+          <h3>Start with ₹3540/- <span>including GST</span></h3>
           <p>One-time fee to begin services</p>
           <Divider />
           <h3>Pay Only on Settlement</h3>
           <p>No hidden charges. 100% transparency.</p>
         </FeeCard>
 
-        <Note>
+        {/* <Note>
           <span>Fair & Transparent –</span> No % fees on loan outstanding like others.  
           Same affordable fee for everyone.
-        </Note>
+        </Note> */}
       </motion.div>
     </FeesSection>
 

@@ -193,7 +193,7 @@ const Services = () => {
       <ServicesSection>
         <TextContent>
           <h2>
-            Settlement <span>Team</span>
+            Sr. Settlement <span>Advisors</span>
           </h2>
         </TextContent>
 

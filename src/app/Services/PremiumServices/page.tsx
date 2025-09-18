@@ -140,7 +140,7 @@ export default function PremiumServices() {
             <li>is facing temporary financial hardships</li>
           </ul>
           <p>• Reply to all demand notices from lenders, whether by draft reply (email) or on lawyer letterhead through RPAD.</p>
-          <p>• Consultant will issue replies to all notices until settlement is complete.</p>
+          <p>• Resolve360 will issue replies to all notices until settlement is complete.</p>
         </>
       ),
     },
@@ -164,8 +164,9 @@ export default function PremiumServices() {
         <ul>
           <li>Client should obtain new number for daily use; old number stays active but on silent mode.</li>
           <li>Return ~2 calls daily, record harassing/abusive calls.</li>
-          <li>Obtain caller’s name and bank details, forward recordings to Consultant.</li>
-          <li>Consultant issues violation notices and escalates if harassment persists.</li>
+          <li>Obtain caller’s name and bank details, forward recordings to Resolve360.</li>
+          <li>Resolve360 issues violation notices and escalates if harassment persists.</li>
+          <li>Alternately forward all unwanted calls to dedicated number provided by us & our team will take care of the same</li>
         </ul>
       ),
     },
@@ -180,7 +181,7 @@ export default function PremiumServices() {
       icon: "/icons/arbitration.png",
       title: "Arbitration & Conciliation Proceedings",
       desc: (
-        <p>We represent you in arbitration/conciliation proceedings initiated by lenders. Drafting replies, objections, written statements, rejoinders, appearances – end-to-end representation included. Offline representation in Bangalore & Gurgaon only.</p>
+        <p>We represent you in arbitration/conciliation proceedings initiated by lenders. Drafting replies, objections, written statements, rejoinders, appearances – end-to-end representation included.</p>
       ),
     },
     {

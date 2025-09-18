@@ -41,6 +41,19 @@ const ServicesSection = styled.section`
   }
 `;
 
+const OurPhilosophy = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url("/RBG.png");
+  background-size: cover;
+  background-position: center;
+  padding: 50px 70px;
+  gap: 60px;
+  background-color: #fff;
+  margin: auto;
+`;
+
 const TextContent = styled.div`
   flex: 1;
   text-align: left;
@@ -85,6 +98,27 @@ const TextContent = styled.div`
     }
 
     @media (max-width: 992px) {
+      font-size: 19px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 16px;
+    }
+  }
+
+
+  li {
+    font-size: 20px;
+    line-height: 1.3;
+    font-family: "poppins", sans-serif;
+    color: #111827;
+    margin-bottom: 24px;
+
+     @media (max-width: 992px) {
       font-size: 19px;
     }
 
@@ -141,6 +175,18 @@ const Services = () => {
         {/* Image on the right */}
         <ImageRight src="/mission.png" alt="Mission" />
       </ServicesSection>
+
+      <OurPhilosophy>
+         <TextContent>
+          <h2>
+            Our <span>Philosophy</span>
+          </h2>
+            <p>• Bank/Lender grants Loans as per Law, the bank/Lender must recover the Loan only as per Law!</p>
+            <p>• The Bank /lender cannot resort to pressure tactics/harassment of borrower and family through home/office visits and endless calls as it is violation of law.</p>
+            <p>• We intervene and protect the rights of borrowers when subjected to harassment of any kind by violating the Law.</p>
+            <p>• We act as shield for borrower to sort their financial situation with dignity and peace of mind.</p>
+        </TextContent>
+      </OurPhilosophy>
 
       <Team />
       <WhyStandout />

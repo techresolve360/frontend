@@ -301,7 +301,8 @@ const HomeSection: React.FC = () => {
               <Title>QUANTIVA FINANCIAL CONSULTANCY PRIVATE LIMITED</Title>
               <Subtitle>CIN: U66190KA2025PTC205922</Subtitle>
               <Subtitle>GSTIN: 29ABCDE1234F1Z5</Subtitle>
-              <Subtitle>Bangalore & Gurgaon</Subtitle>
+              <Subtitle> <strong>Banglore Office: </strong> Baskara's Plaza, 2nd Floor, HSR  Layout Sector 6, 560102, Karnataka, Bangalore</Subtitle>
+              <Subtitle> <strong>Gurgaon Office: </strong>  c/o 91 Springboard,  Level 2, Augusta Point, Golf Course Road, Sector 53, Gurugram , Haryana - 122002</Subtitle>
             </Content>
           </CarouselSlide>
         </SlideWrapper>
