@@ -76,7 +76,11 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  /* ✅ prevent overflow */
   word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
 
   @media (max-width: 1024px) {
     margin: 2rem 0;
@@ -85,33 +89,49 @@ const Content = styled.div`
 
   @media (max-width: 768px) {
     margin: 1.5rem 0;
+    padding: 0 10px; /* ✅ add padding so text doesn't touch edges */
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 6px;
   }
 `;
 
 const Title = styled.h1`
-  font-size: clamp(1.6rem, 4vw, 3rem); /* responsive font */
+  font-size: clamp(1.3rem, 4.5vw, 2.5rem);
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   color: #fff;
-  line-height: 1.3;
-  word-break: break-word;
+  line-height: 1.4;
+  word-break: break-word; /* ✅ wrap long words */
 
   @media (max-width: 768px) {
     text-align: left;
+    line-height: 1.35;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.2rem; /* ✅ smaller on very small screens */
   }
 `;
 
 const Subtitle = styled.p`
   margin-top: 15px;
-  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  font-size: clamp(0.85rem, 2.5vw, 1.1rem);
   font-family: "Lato", sans-serif;
   color: #dcdcdc;
   line-height: 1.5;
+  word-break: break-word; /* ✅ prevent overflow */
 
   @media (max-width: 768px) {
     margin-top: 10px;
   }
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
 `;
+
 
 const ButtonContainer = styled.div`
   margin-top: 25px;
@@ -302,7 +322,7 @@ const HomeSection: React.FC = () => {
               <Subtitle>CIN: U66190KA2025PTC205922</Subtitle>
               <Subtitle>GSTIN: 29ABCDE1234F1Z5</Subtitle>
               <Subtitle> <strong>Banglore Office: </strong> Baskara's Plaza, 2nd Floor, HSR  Layout Sector 6, 560102, Karnataka, Bangalore</Subtitle>
-              <Subtitle> <strong>Gurgaon Office: </strong>  c/o 91 Springboard,  Level 2, Augusta Point, Golf Course Road, Sector 53, Gurugram , Haryana - 122002</Subtitle>
+              <Subtitle> <strong>Gurgaon Office:</strong>  c/o 91 Springboard,  Level 2, Augusta Point, Golf Course Road, Sector 53, Gurugram , Haryana - 122002</Subtitle>
             </Content>
           </CarouselSlide>
         </SlideWrapper>
