@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { FiPhoneCall } from "react-icons/fi"; 
+import { FiPhoneCall } from "react-icons/fi";
 import { IoClose, IoChevronDown } from "react-icons/io5";
 import {
   Overlay,
@@ -19,8 +19,9 @@ import {
 } from "../Styles/Modal.styles";
 
 export interface ModalProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen?: boolean; // optional for page mode
+  onClose?: () => void;
+  mode?: "modal" | "page"; // NEW
 }
 
 const ErrorText = {
@@ -55,7 +56,7 @@ const callTimes = [
   "Flexible / Not decided yet",
 ];
 
-const ContactFormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
+const ContactFormModal: React.FC<ModalProps> = ({ isOpen = true, onClose, mode = "modal" }) => {
   const [fullName, setFullName] = useState("");
   const [phone, setPhone] = useState("");
   const [loanAmount, setLoanAmount] = useState("");
@@ -66,7 +67,7 @@ const ContactFormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  if (!isOpen) return null;
+  if (mode === "modal" && !isOpen) return null;
 
   const validate = () => {
     let newErrors: { [key: string]: string } = {};
@@ -96,104 +97,126 @@ const ContactFormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         });
         alert("Form submitted successfully!");
         setIsSubmitting(false);
-        onClose();
+        onClose?.();
       }, 1200);
     }
   };
 
-  return (
-    <Overlay id="contact">
-      <ModalContainer>
+  const FormContent = (
+    <>
+      {mode === "modal" && (
         <CloseButton onClick={onClose}>
           <IoClose />
         </CloseButton>
+      )}
 
-        <Title>Get In Touch</Title>
+      <Title>Get In Touch</Title>
 
-        <Label>Full Name</Label>
-        <Input
-          type="text"
-          placeholder="Enter your name *"
-          value={fullName}
-          onChange={(e) => setFullName(e.target.value)}
-        />
-        {errors.fullName && <span style={ErrorText}>{errors.fullName}</span>}
+      <Label>Full Name</Label>
+      <Input
+        type="text"
+        placeholder="Enter your name *"
+        value={fullName}
+        onChange={(e) => setFullName(e.target.value)}
+      />
+      {errors.fullName && <span style={ErrorText}>{errors.fullName}</span>}
 
-        <Label>Phone Number</Label>
-        <Input
-          type="text"
-          placeholder="10-digit mobile *"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-        />
-        {errors.phone && <span style={ErrorText}>{errors.phone}</span>}
+      <Label>Phone Number</Label>
+      <Input
+        type="text"
+        placeholder="10-digit mobile *"
+        value={phone}
+        onChange={(e) => setPhone(e.target.value)}
+      />
+      {errors.phone && <span style={ErrorText}>{errors.phone}</span>}
 
-        <Label>Total Outstanding of Personal Loan/Credit Card</Label>
-        <Input
-          type="text"
-          placeholder="Loan Amount *"
-          value={loanAmount}
-          onChange={(e) => setLoanAmount(e.target.value)}
-        />
-        {errors.loanAmount && <span style={ErrorText}>{errors.loanAmount}</span>}
+      <Label>Total Outstanding of Personal Loan/Credit Card</Label>
+      <Input
+        type="text"
+        placeholder="Loan Amount *"
+        value={loanAmount}
+        onChange={(e) => setLoanAmount(e.target.value)}
+      />
+      {errors.loanAmount && <span style={ErrorText}>{errors.loanAmount}</span>}
 
-        <Label>Preferred Language</Label>
-        <Dropdown>
-          <DropdownHeader onClick={() => setLanguageDropdownOpen(!languageDropdownOpen)}>
-            {preferredLanguage || "Select Language"}
-            <IoChevronDown size={18} />
-          </DropdownHeader>
-          {languageDropdownOpen && (
-            <DropdownList>
-              {languages.map((lang, idx) => (
-                <DropdownItem
-                  key={idx}
-                  onClick={() => {
-                    setPreferredLanguage(lang);
-                    setLanguageDropdownOpen(false);
-                  }}
-                >
-                  {lang}
-                </DropdownItem>
-              ))}
-            </DropdownList>
-          )}
-        </Dropdown>
+      <Label>Preferred Language</Label>
+      <Dropdown>
+        <DropdownHeader onClick={() => setLanguageDropdownOpen(!languageDropdownOpen)}>
+          {preferredLanguage || "Select Language"}
+          <IoChevronDown size={18} />
+        </DropdownHeader>
+        {languageDropdownOpen && (
+          <DropdownList>
+            {languages.map((lang, idx) => (
+              <DropdownItem
+                key={idx}
+                onClick={() => {
+                  setPreferredLanguage(lang);
+                  setLanguageDropdownOpen(false);
+                }}
+              >
+                {lang}
+              </DropdownItem>
+            ))}
+          </DropdownList>
+        )}
+      </Dropdown>
 
-        <Label>When do you want us to connect</Label>
-        <Dropdown>
-          <DropdownHeader onClick={() => setCallTimeDropdownOpen(!callTimeDropdownOpen)}>
-            {callTime || "Select Call Time"}
-            <IoChevronDown size={18} />
-          </DropdownHeader>
-          {callTimeDropdownOpen && (
-            <DropdownList>
-              {callTimes.map((time, idx) => (
-                <DropdownItem
-                  key={idx}
-                  onClick={() => {
-                    setCallTime(time);
-                    setCallTimeDropdownOpen(false);
-                  }}
-                >
-                  {time}
-                </DropdownItem>
-              ))}
-            </DropdownList>
-          )}
-        </Dropdown>
+      <Label>When do you want us to connect</Label>
+      <Dropdown>
+        <DropdownHeader onClick={() => setCallTimeDropdownOpen(!callTimeDropdownOpen)}>
+          {callTime || "Select Call Time"}
+          <IoChevronDown size={18} />
+        </DropdownHeader>
+        {callTimeDropdownOpen && (
+          <DropdownList>
+            {callTimes.map((time, idx) => (
+              <DropdownItem
+                key={idx}
+                onClick={() => {
+                  setCallTime(time);
+                  setCallTimeDropdownOpen(false);
+                }}
+              >
+                {time}
+              </DropdownItem>
+            ))}
+          </DropdownList>
+        )}
+      </Dropdown>
 
-        <Label style={{ color: 'red', fontSize:'14px', fontWeight: '600', textAlign: 'center', marginBottom:'-6px' }}>So you don't miss our call !!</Label>
-        <HighlightNumber>
-          <FiPhoneCall size={16} />
-          <span>Save our number: <strong>+91 70444 32779</strong></span>
-        </HighlightNumber>
+      <Label
+        style={{
+          color: "red",
+          fontSize: "14px",
+          fontWeight: "600",
+          textAlign: "center",
+          marginBottom: "-6px",
+        }}
+      >
+        So you don't miss our call !!
+      </Label>
+      <HighlightNumber>
+        <FiPhoneCall size={16} />
+        <span>
+          Save our number: <strong>+91 70444 32779</strong>
+        </span>
+      </HighlightNumber>
 
-        <SubmitButton onClick={handleSubmit} disabled={isSubmitting}>
-          {isSubmitting ? "Submitting..." : "Submit"}
-        </SubmitButton>
-      </ModalContainer>
+      <SubmitButton onClick={handleSubmit} disabled={isSubmitting}>
+        {isSubmitting ? "Submitting..." : "Submit"}
+      </SubmitButton>
+    </>
+  );
+
+  return mode === "modal" ? (
+    <Overlay id="contact">
+      <ModalContainer>{FormContent}</ModalContainer>
     </Overlay>
+  ) : (
+    <div style={{ padding: "2rem", maxWidth: "800px", margin: "0 auto" }}>
+      <ModalContainer>{FormContent}</ModalContainer>
+    </div>
   );
 };
 
