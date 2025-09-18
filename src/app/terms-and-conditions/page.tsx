@@ -133,9 +133,7 @@ export default function TermsAndConditions() {
               agents.
             </li>
             <li>
-              <strong>Scope of Service:</strong> Our role is advisory and
-              facilitative; we do not provide financial loans or guarantee
-              settlement outcomes.
+              <strong>Scope of Service:</strong> Our role is advisory and facilitative; we do not provide financial loans. Kindly delete the last part or guarantee settlement outcomes.
             </li>
           </List>
         </Section>
@@ -190,26 +188,9 @@ export default function TermsAndConditions() {
           </List>
         </Section>
 
+        
         <Section>
-          <SectionTitle>5. Limitations of Service</SectionTitle>
-          <List>
-            <li>
-              We act as facilitators and do not guarantee the outcome of loan
-              settlement negotiations.
-            </li>
-            <li>
-              We are not responsible for the decisions or actions of financial
-              institutions, including refusal to negotiate.
-            </li>
-            <li>
-              We do not assume liability for any legal action taken by financial
-              institutions or third parties due to loan defaults.
-            </li>
-          </List>
-        </Section>
-
-        <Section>
-          <SectionTitle>6. Confidentiality and Privacy</SectionTitle>
+          <SectionTitle>5. Confidentiality and Privacy</SectionTitle>
           <List>
             <li>
               Your personal and financial information will be handled in
@@ -224,7 +205,7 @@ export default function TermsAndConditions() {
         </Section>
 
         <Section>
-          <SectionTitle>7. Intellectual Property</SectionTitle>
+          <SectionTitle>6. Intellectual Property</SectionTitle>
           <List>
             <li>
               All content, logos, designs, and materials on this website are the
@@ -239,7 +220,7 @@ export default function TermsAndConditions() {
         </Section>
 
         <Section>
-          <SectionTitle>8. Disclaimer of Warranties</SectionTitle>
+          <SectionTitle>7. Disclaimer of Warranties</SectionTitle>
           <List>
             <li>
               Our services are provided on an “as-is” and “as-available” basis.
@@ -256,7 +237,7 @@ export default function TermsAndConditions() {
         </Section>
 
         <Section>
-          <SectionTitle>9. Limitation of Liability</SectionTitle>
+          <SectionTitle>8. Limitation of Liability</SectionTitle>
           <List>
             <li>
               To the extent permitted by Indian law, our liability for any
@@ -271,7 +252,7 @@ export default function TermsAndConditions() {
         </Section>
 
         <Section>
-          <SectionTitle>10. Termination</SectionTitle>
+          <SectionTitle>9. Termination</SectionTitle>
           <List>
             <li>
               We reserve the right to terminate your access to our website or
@@ -283,7 +264,7 @@ export default function TermsAndConditions() {
         </Section>
 
         <Section>
-          <SectionTitle>11. Governing Law and Jurisdiction</SectionTitle>
+          <SectionTitle>10. Governing Law and Jurisdiction</SectionTitle>
           <List>
             <li>These Terms and Conditions are governed by the laws of India.</li>
             <li>
@@ -294,16 +275,16 @@ export default function TermsAndConditions() {
         </Section>
 
         <Section>
-          <SectionTitle>12. Grievance Redressal</SectionTitle>
+          <SectionTitle>11. Grievance Redressal</SectionTitle>
           <Paragraph>
             In compliance with Indian law, we have appointed a Grievance Officer
             to address complaints or concerns.
           </Paragraph>
           <List>
-            <li>Name: [Insert Name of Grievance Officer]</li>
-            <li>Email: [Insert Email Address]</li>
-            <li>Phone: [Insert Phone Number]</li>
-            <li>Address: [Insert Office Address]</li>
+            <li>Name: Vipin Choudhary</li>
+            <li>Email: vipin@resolve360.in</li>
+            <li>Phone: +91 99004 75500</li>
+            <li>Address: No. 994/79, 27th A Main Road, 9th Block, Jayanagar, Bangalore 560041</li>
           </List>
           <Paragraph>
             We aim to resolve grievances within 30 days of receipt.
@@ -311,7 +292,7 @@ export default function TermsAndConditions() {
         </Section>
 
         <Section>
-          <SectionTitle>13. Changes to Terms and Conditions</SectionTitle>
+          <SectionTitle>12. Changes to Terms and Conditions</SectionTitle>
           <List>
             <li>
               We reserve the right to update or modify these Terms and
@@ -326,7 +307,7 @@ export default function TermsAndConditions() {
         </Section>
 
         <Section>
-          <SectionTitle>14. Contact Us</SectionTitle>
+          <SectionTitle>13. Contact Us</SectionTitle>
           <ContactInfo>
             <p>
               Email:{" "}

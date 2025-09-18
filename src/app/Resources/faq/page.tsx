@@ -183,7 +183,7 @@ Let us assess your case during the free consultation and estimate how much you c
   {
     question: "How long does the settlement process take?",
     answer:
-      "The timeline varies, but most settlements are completed within 3-6 months. We keep you updated throughout the process.",
+      "It depends on your ability to save funds for settlements.",
   },
   {
     question: "How do I get started?",
