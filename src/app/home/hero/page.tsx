@@ -77,7 +77,6 @@ const Content = styled.div`
   flex-direction: column;
   align-items: flex-start;
 
-  /* ✅ prevent overflow */
   word-wrap: break-word;
   overflow-wrap: break-word;
   word-break: break-word;
@@ -89,7 +88,7 @@ const Content = styled.div`
 
   @media (max-width: 768px) {
     margin: 1.5rem 0;
-    padding: 0 10px; /* ✅ add padding so text doesn't touch edges */
+    padding: 0 10px; 
   }
 
   @media (max-width: 480px) {
@@ -103,15 +102,15 @@ const Title = styled.h1`
   font-weight: bold;
   color: #fff;
   line-height: 1.4;
-  word-break: break-word; /* ✅ wrap long words */
+  word-break: break-word;
 
   @media (max-width: 768px) {
     text-align: left;
-    line-height: 1.35;
+    line-height: 1.5;
   }
 
   @media (max-width: 480px) {
-    font-size: 1.2rem; /* ✅ smaller on very small screens */
+    font-size: 1.5rem; 
   }
 `;
 
@@ -121,7 +120,7 @@ const Subtitle = styled.p`
   font-family: "Lato", sans-serif;
   color: #dcdcdc;
   line-height: 1.5;
-  word-break: break-word; /* ✅ prevent overflow */
+  word-break: break-word; 
 
   @media (max-width: 768px) {
     margin-top: 10px;
