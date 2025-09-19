@@ -112,6 +112,8 @@ export default function Footer() {
           <RightSection>
             <p>Address</p>
             <a>Baskara's Plaza, 2nd Floor, HSR  Layout Sector 6, 560102, Karnataka, Bangalore</a>
+						 <a>c/o 91 Springboard,  Level 2, Augusta Point, Golf Course Road, Sector 53, Gurugram , Haryana</a>
+
 
             <p>Call</p>
             <a>+91 99004 75500</a>
