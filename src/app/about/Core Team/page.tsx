@@ -96,11 +96,25 @@ const Card = styled.div`
 
 const CardImage = styled.img`
   width: 100%;
-  height: 280px;
+  height: 280px; /* ✅ default (desktop) */
   object-fit: cover;
   border-radius: 12px 12px 0 0;
   box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+
+  @media (max-width: 1200px) {
+    height: 300px; /* slightly taller */
+  }
+  @media (max-width: 992px) {
+    height: 320px;
+  }
+  @media (max-width: 768px) {
+    height: 340px;
+  }
+  @media (max-width: 480px) {
+    height: 360px; /* ✅ more vertical space on small screens */
+  }
 `;
+
 
 const CardName = styled.h3`
   font-family: 'poppins', sans-serif;
