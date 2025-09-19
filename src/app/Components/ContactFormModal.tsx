@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import { FiPhoneCall } from "react-icons/fi";
+import axios from "axios";
+
 import { IoClose, IoChevronDown } from "react-icons/io5";
 import {
   Overlay,
@@ -84,23 +86,64 @@ const ContactFormModal: React.FC<ModalProps> = ({ isOpen = true, onClose, mode =
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = () => {
-    if (validate()) {
-      setIsSubmitting(true);
-      setTimeout(() => {
-        console.log({
-          fullName,
-          phone,
-          loanAmount,
-          preferredLanguage,
-          callTime,
-        });
-        alert("Form submitted successfully!");
-        setIsSubmitting(false);
-        onClose?.();
-      }, 1200);
+  // const handleSubmit = () => {
+  //   if (validate()) {
+  //     setIsSubmitting(true);
+  //     setTimeout(() => {
+  //       console.log({
+  //         fullName,
+  //         phone,
+  //         loanAmount,
+  //         preferredLanguage,
+  //         callTime,
+  //       });
+  //       alert("Form submitted successfully!");
+  //       setIsSubmitting(false);
+  //       onClose?.();
+  //     }, 1200);
+  //   }
+  // };
+  const API_URL = "https://api.resolve360.in";
+  const handleSubmit = async () => {
+  if (!validate()) return;
+
+  setIsSubmitting(true);
+
+  try {
+    const payload = {
+      fullName,
+      phone,
+      loanAmount,
+      preferredLanguage,
+      callTime,
+    };
+
+    const res = await axios.post(`${API_URL}/submit-form`, payload, {
+      headers: { "Content-Type": "application/json" },
+    });
+
+    if (res.status === 200) {
+      // Clear form (optional)
+      setFullName("");
+      setPhone("");
+      setLoanAmount("");
+      setPreferredLanguage("");
+      setCallTime("");
+
+      alert("Form submitted successfully!");
+      onClose?.();
+    } else {
+      console.error("Submit error:", res.data);
+      alert(`Submit failed: ${res.data.message || "Server error"}`);
     }
-  };
+  } catch (err: any) {
+    console.error("Network error:", err);
+    alert("Network error. Please try again.");
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
 
   const FormContent = (
     <>
