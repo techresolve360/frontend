@@ -52,6 +52,24 @@ const OurPhilosophy = styled.section`
   gap: 60px;
   background-color: #fff;
   margin: auto;
+
+  @media (max-width: 1200px) {
+    padding: 20px 50px;
+    gap: 55px;
+  }
+  @media (max-width: 992px) {
+    padding: 15px 40px;
+    gap: 50px;
+  }
+  @media (max-width: 768px) {
+    padding: 12px 20px;
+    gap: 45px;
+  }
+  @media (max-width: 480px) {
+    padding: 0px 16px 40px 16px;
+    gap: 20px;
+  }
+  
 `;
 
 const TextContent = styled.div`
