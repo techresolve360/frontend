@@ -111,9 +111,8 @@ export default function Footer() {
         >
           <RightSection>
             <p>Address</p>
-            <a>Baskara's Plaza, 2nd Floor, HSR  Layout Sector 6, 560102, Karnataka, Bangalore</a>
-						 <a>c/o 91 Springboard,  Level 2, Augusta Point, Golf Course Road, Sector 53, Gurugram , Haryana</a>
-
+            <a><strong>Bangalore Office:</strong> 994/79, 27th A main road, Jayanagar 9th block, Bangalore - 560041</a>
+						 <a><strong>Gurgaon Office:</strong>  c/o 91 Springboard,  Level 2, Augusta Point, Golf Course Road, Sector 53, Gurugram , Haryana - 122002</a>
 
             <p>Call</p>
             <a>+91 99004 75500</a>

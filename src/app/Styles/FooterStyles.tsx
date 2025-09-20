@@ -108,7 +108,7 @@ export const MiddleSection = styled.div`
 export const RightSection = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 180px;
+  max-width: 300px;
 
   p {
     font-size: 1rem;
