@@ -159,10 +159,8 @@ const faqData: FaqItemType[] = [
       `The savings from a loan settlement depend on your case and lender negotiations. Here's what to expect:
 
 - Negotiable Amount : Lenders often agree to waive late fees, penalties, or even a portion of the principal amount.
-- Typical Savings : Customers typically save up to 60% of the outstanding amount, depending on the loan type, lender policies, and financial hardships.
 - Resolve360 Advantage : With over 20 years of legal experience, we specialise in securing the best settlement offers for our clients.
-Let us assess your case during the free consultation and estimate how much you can save. 
-<b>Our anti-harassment services cost INR 1100/- per month. Loan settlement services can be shared only after case evaluation, which is free of cost.</b>`,
+Let us assess your case during the free consultation and estimate how much you can save.`,
   },
   {
     question: "How do I stop recovery agents from harassing me?",

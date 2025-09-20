@@ -112,7 +112,7 @@ export default function CyberFraudStats() {
   // All cards data grouped by sections
   const sections = [
     {
-      subheading: "❯❯ Reduce our Debt by 60%",
+      subheading: "❯❯ Reduce our Debt by 70%",
       cards: [
         {
           icon: "/icons/Request.png",
