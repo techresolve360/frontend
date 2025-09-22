@@ -177,7 +177,7 @@ const Services = () => {
         {/* Text on the left */}
         <TextContent>
           <h2>
-            Our Mission: <span>Empowering Financial Freedom</span>
+            About <span>Us</span>
           </h2>
           <p>
             At Resolve360, our mission is to help individuals overcome financial
