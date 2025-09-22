@@ -84,7 +84,7 @@ export default function Footer() {
           <MiddleSection>
             <p>Quick Links</p>
             <a href="/">Home</a>
-            <a href="/about">About</a>
+            <a href="/about">About Us</a>
             <a href="/Services">Services</a>
             <a href="/Resources">Resources</a>
           </MiddleSection>
