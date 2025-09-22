@@ -4,6 +4,7 @@ import "./globals.css";
 import StyledComponentsRegistry from "./Registry";
 import Navbar from "../../src/app/Components/Navbar";
 import Footer from "../../src/app/Components/Footer";
+import Script from "next/script";
 
 // Load fonts
 const montserrat = Montserrat({
@@ -61,6 +62,19 @@ export default function RootLayout({
         `}
         style={{ overflowX: "hidden" }} // Prevents horizontal scroll
       >
+        {/* ✅ Google Analytics */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-6ZNLF14EDB"
+        />
+        <Script id="ga-script" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-6ZNLF14EDB');
+          `}
+        </Script>
         <StyledComponentsRegistry>
           <Navbar />
           <main className="flex-1">
