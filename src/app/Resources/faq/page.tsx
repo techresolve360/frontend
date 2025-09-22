@@ -157,7 +157,7 @@ const faqData: FaqItemType[] = [
     question: "How much can I save through a loan settlement?",
     answer:
       `The savings from a loan settlement depend on your case and lender negotiations. Here's what to expect:
-
+- Typical Savings: Customers typically save by up to 70% of the outstanding amount, depending on the loan type, lender policies, and financial hardships.
 - Negotiable Amount : Lenders often agree to waive late fees, penalties, or even a portion of the principal amount.
 - Resolve360 Advantage : With over 20 years of legal experience, we specialise in securing the best settlement offers for our clients.
 Let us assess your case during the free consultation and estimate how much you can save.`,
