@@ -124,6 +124,13 @@ const ContactFormModal: React.FC<ModalProps> = ({ isOpen = true, onClose, mode =
 
     if (res.status === 200) {
       // Clear form (optional)
+       // ✅ Fire GA4 event here
+      if (typeof window !== "undefined" && (window as any).gtag) {
+        (window as any).gtag("event", "form_submit", {
+          page_path: window.location.pathname, // e.g. /contact
+          page_title: document.title,          // e.g. "Contact | Resolve360"
+        });
+      }
       setFullName("");
       setPhone("");
       setLoanAmount("");
