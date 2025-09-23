@@ -68,6 +68,8 @@ const ContactFormModal: React.FC<ModalProps> = ({ isOpen = true, onClose, mode =
   const [callTimeDropdownOpen, setCallTimeDropdownOpen] = useState(false);
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showThankYou, setShowThankYou] = useState(false);
+
 
   if (mode === "modal" && !isOpen) return null;
 
@@ -136,9 +138,12 @@ const ContactFormModal: React.FC<ModalProps> = ({ isOpen = true, onClose, mode =
       setLoanAmount("");
       setPreferredLanguage("");
       setCallTime("");
+      
 
-      alert("Form submitted successfully!");
-      onClose?.();
+      // alert("Form submitted successfully!");
+      // onClose?.();
+      setShowThankYou(true); // show thank-you popup
+
     } else {
       console.error("Submit error:", res.data);
       alert(`Submit failed: ${res.data.message || "Server error"}`);
@@ -259,15 +264,63 @@ const ContactFormModal: React.FC<ModalProps> = ({ isOpen = true, onClose, mode =
     </>
   );
 
+  // return mode === "modal" ? (
+  //   <Overlay id="contact">
+  //     <ModalContainer>{FormContent}</ModalContainer>
+  //   </Overlay>
+  // ) : (
+  //   <div style={{ padding: "2rem", maxWidth: "800px", margin: "0 auto" }}>
+  //     <ModalContainer>{FormContent}</ModalContainer>
+  //   </div>
+    
+  // );
   return mode === "modal" ? (
-    <Overlay id="contact">
-      <ModalContainer>{FormContent}</ModalContainer>
-    </Overlay>
-  ) : (
-    <div style={{ padding: "2rem", maxWidth: "800px", margin: "0 auto" }}>
-      <ModalContainer>{FormContent}</ModalContainer>
-    </div>
-  );
+  <Overlay id="contact">
+    <ModalContainer>{FormContent}</ModalContainer>
+    {showThankYou && (
+      <Overlay>
+        <ModalContainer style={{ textAlign: "center", padding: "2rem" }}>
+          {/* <h2>🎉 Thank You!</h2> */}
+          <h2 style={{ fontWeight: "700", marginBottom: "1rem" }}>🎉 Thank You!</h2>
+          <p>Your form has been submitted successfully. Our team will contact you soon.</p>
+          <SubmitButton
+            style={{ marginTop: "1.5rem" }}
+            onClick={() => {
+              setShowThankYou(false);
+              onClose?.();
+            }}
+          >
+            Close
+          </SubmitButton>
+        </ModalContainer>
+      </Overlay>
+    )}
+  </Overlay>
+) : (
+  <div style={{ padding: "2rem", maxWidth: "800px", margin: "0 auto" }}>
+    <ModalContainer>{FormContent}</ModalContainer>
+    {showThankYou && (
+      <Overlay>
+        <ModalContainer style={{ textAlign: "center", padding: "2rem" }}>
+          {/* <h2>🎉 Thank You!</h2> */}
+          <h2 style={{ fontWeight: "700", marginBottom: "1rem" }}>🎉 Thank You!</h2>
+          <p>Your form has been submitted successfully. Our team will contact you soon.</p>
+          <SubmitButton
+            style={{ marginTop: "1.5rem" }}
+            onClick={() => {
+              setShowThankYou(false);
+              onClose?.();
+            }}
+          >
+            Close
+          </SubmitButton>
+        </ModalContainer>
+      </Overlay>
+    )}
+  </div>
+);
+
+
 };
 
 export default ContactFormModal;
