@@ -35,16 +35,16 @@ const ErrorText = {
 
 const cities = ["Bangalore", "Delhi-NCR", "Hyderabad", "Other"];
 
-const callTimes = [
-  "Immediately",
-  "Within 6 hours",
-  "Today (by end of day)",
-  "Tomorrow",
-  "2–3 days",
-  "Within 1 week",
-  "Within 2 weeks",
-  "Flexible / Not decided yet",
-];
+// const callTimes = [
+//   "Immediately",
+//   "Within 6 hours",
+//   "Today (by end of day)",
+//   "Tomorrow",
+//   "2–3 days",
+//   "Within 1 week",
+//   "Within 2 weeks",
+//   "Flexible / Not decided yet",
+// ];
 
 const outstandingRanges = [
   "0–5 Lakh",
@@ -63,8 +63,8 @@ const ContactFormModal: React.FC<ModalProps> = ({ isOpen = true, onClose, mode =
   const [customCity, setCustomCity] = useState("");
   const [cityDropdownOpen, setCityDropdownOpen] = useState(false);
 
-  const [callTime, setCallTime] = useState("");
-  const [callTimeDropdownOpen, setCallTimeDropdownOpen] = useState(false);
+  // const [callTime, setCallTime] = useState("");
+  // const [callTimeDropdownOpen, setCallTimeDropdownOpen] = useState(false);
 
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -99,13 +99,21 @@ const ContactFormModal: React.FC<ModalProps> = ({ isOpen = true, onClose, mode =
     try {
       const finalCity = city === "Other" ? customCity : city;
 
+      // const payload = {
+      //   fullName,
+      //   phone,
+      //   loanAmount,
+      //   city: finalCity,
+      //   callTime,
+      // };
       const payload = {
-        fullName,
-        phone,
-        loanAmount,
-        city: finalCity,
-        callTime,
-      };
+                fullName,
+                phone,
+                loanAmount,
+                city,
+                otherCity: city === "Other" ? customCity : "",
+              };
+
 
       const res = await axios.post(`${API_URL}/submit-form`, payload, {
         headers: { "Content-Type": "application/json" },
@@ -124,7 +132,7 @@ const ContactFormModal: React.FC<ModalProps> = ({ isOpen = true, onClose, mode =
         setLoanAmount("");
         setCity("");
         setCustomCity("");
-        setCallTime("");
+        // setCallTime("");
 
         setShowThankYou(true);
       } else {
@@ -230,7 +238,7 @@ const ContactFormModal: React.FC<ModalProps> = ({ isOpen = true, onClose, mode =
         </>
       )}
 
-      {/* ---------- Call Time Selection ---------- */}
+      {/* ---------- Call Time Selection ----------
       <Label>When do you want us to connect</Label>
       <Dropdown>
         <DropdownHeader onClick={() => setCallTimeDropdownOpen(!callTimeDropdownOpen)}>
@@ -252,7 +260,7 @@ const ContactFormModal: React.FC<ModalProps> = ({ isOpen = true, onClose, mode =
             ))}
           </DropdownList>
         )}
-      </Dropdown>
+      </Dropdown> */}
 
       <Label
         style={{
