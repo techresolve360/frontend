@@ -192,6 +192,11 @@ const Services = () => {
                 img: "/Dennis.jpeg", 
                 name: "Dennis", 
                 desc: "Senior Inside Sales Manager" 
+            },
+            {
+              img: "/ramesh.jpeg",
+              name: "Ramesh Designation",
+              desc: "Head Legal",
             }
           ].map((member, i) => (
             <Card key={i}>
@@ -278,6 +283,18 @@ const Services = () => {
                 name: "Jitesh Kotiya",
                 desc: "Pune, Maharastra",
                 lang: " Gujarati Hindi and English"
+            },
+            {
+                img: "/fritz.jpeg",
+                name: "Fritz Brandon Farias",
+                desc: "Bangalore, Karnataka ",
+                lang: " Hindi, English, Marathi"
+            },
+            {
+                img: "/mirza.jpeg",
+                name: "Mirza Twasif Baig",
+                desc: "Bangalore, Karnataka",
+                lang: " English, Hindi, Odia"
             }
 
           ].map((member, i) => (
