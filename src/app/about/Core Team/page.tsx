@@ -195,8 +195,8 @@ const Services = () => {
             },
             {
               img: "/ramesh.jpeg",
-              name: "Ramesh",
-              desc: "Head Legal",
+              name: "Ramesh Vedularapu",
+              desc: "Head Legal - Telangana & Andhra Pradesh",
             }
           ].map((member, i) => (
             <Card key={i}>
