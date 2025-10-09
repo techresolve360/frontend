@@ -22,7 +22,7 @@ const Navbar = () => {
     { path: "/Services", label: "Services" },
     { path: "/about", label: "About Us" },
     { path: "/core-values", label: "Core Values" },
-    { path: "/Resources", label: "Resources" },
+    { path: "/Resources", label: "Blog" },
   ];
 
   return (

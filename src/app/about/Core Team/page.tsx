@@ -195,7 +195,7 @@ const Services = () => {
             },
             {
               img: "/ramesh.jpeg",
-              name: "Ramesh Designation",
+              name: "Ramesh",
               desc: "Head Legal",
             }
           ].map((member, i) => (
