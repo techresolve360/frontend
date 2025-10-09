@@ -286,7 +286,7 @@ const Services = () => {
             },
             {
                 img: "/fritz.jpeg",
-                name: "Fritz Brandon Farias",
+                name: "Fritz Farias",
                 desc: "Bangalore, Karnataka ",
                 lang: "English, Kannada, Hindi"
             },
