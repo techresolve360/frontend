@@ -86,7 +86,8 @@ export default function Footer() {
             <a href="/">Home</a>
             <a href="/about">About Us</a>
             <a href="/Services">Services</a>
-            <a href="/Resources">Resources</a>
+            <a href="/core-values">Core Values</a>
+            <a href="/Resources">Blog</a>
           </MiddleSection>
         </motion.div>
 
