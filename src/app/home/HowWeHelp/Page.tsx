@@ -1,18 +1,17 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { useState } from "react";
 import Modal from "../../Components/ContactFormModal";
+import { FaPhoneAlt, FaHandshake, FaCheckCircle } from "react-icons/fa";
 
 // ===== Styled Components =====
 const SectionWrapper = styled.div`
-  padding: 0px 70px;
-  
+  padding: 0 70px;
 
   @media (max-width: 768px) {
-    padding: 0px 20px;
+    padding: 0 20px;
   }
 `;
 
@@ -21,7 +20,7 @@ const SectionHeading = styled.h2`
   font-weight: bold;
   color: #000;
   margin-bottom: 40px;
-    font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 
   span {
     color: #007bff;
@@ -60,7 +59,7 @@ const FeesSection = styled.section`
 const FeesHeading = styled.h2`
   font-size: 36px;
   font-weight: 700;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,7 +82,7 @@ const FeesHeading = styled.h2`
 
 const FeesSubText = styled.p`
   font-size: 22px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   max-width: 800px;
   margin: 0 auto 40px auto;
@@ -115,44 +114,87 @@ const Highlight = styled.span`
   font-weight: 700;
 `;
 
-const FeeCard = styled.div`
+const CardsContainer = styled.div`
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+
+`;
+
+const Card = styled.div`
   background: rgba(17, 17, 17, 0.9);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 16px;
   padding: 40px 30px;
-  margin: 0 auto 30px auto;
-  max-width: 500px;
   text-align: center;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(8px);
+  flex: 1 1 400px;
+  max-width: 500px;
+  margin: 0; /* removed margin to eliminate space */
 
   h3 {
     font-size: 24px;
     font-weight: 700;
     color: #00c4ff;
-    margin-bottom: 6px;
+    margin-bottom: 12px;
+
+    span {
+      color: #fff;
+    }
   }
 
   p {
     font-size: 16px;
     color: #ddd;
     margin-bottom: 20px;
+    line-height: 1.6;
   }
 
-  span {
-  font-size: 18px;
-  font-weight: 400;
-    color: #00c4ff;
-    margin-bottom: 6px;
+  .steps {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+
+      svg {
+        color: #00c4ff;
+        font-size: 32px;
+      }
+
+      span {
+        font-size: 14px;
+        font-weight: 600;
+        color: #fff;
+      }
+    }
   }
 
   @media (max-width: 768px) {
     padding: 30px 20px;
+
     h3 {
       font-size: 20px;
     }
+
     p {
       font-size: 14px;
+    }
+
+    .steps div svg {
+      font-size: 28px;
+    }
+
+    .steps div span {
+      font-size: 12px;
     }
   }
 `;
@@ -162,29 +204,6 @@ const Divider = styled.div`
   height: 1px;
   background: rgba(255, 255, 255, 0.2);
   margin: 20px auto;
-`;
-
-const Note = styled.p`
-  background: linear-gradient(90deg, #007bff, #00c4ff);
-  color: #fff;
-  font-family: 'Montserrat', sans-serif;
-  border-radius: 10px;
-  padding: 16px 24px;
-  font-size: 1rem;
-  font-weight: 500;
-  display: inline-block;
-  max-width: 700px;
-  margin: 0 auto;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-
-  span {
-    font-weight: 700;
-  }
-
-  @media (max-width: 768px) {
-    font-size: 0.9rem;
-    padding: 14px 18px;
-  }
 `;
 
 const ButtonWrapper = styled.div`
@@ -204,7 +223,7 @@ const GetStartedButton = styled.button`
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s ease;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 
   &:hover {
     background: #005fcc;
@@ -216,26 +235,20 @@ const GetStartedButton = styled.button`
   }
 `;
 
+// ===== Component =====
 export default function HelpAndFees() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const cards = [
-    { title: "Up to 10 lac", price: "₹ 60,000", months: "10 Months", monthly: "₹ 6,500/month" },
-    { title: "11 to 20 lac", price: "₹ 85,000", months: "10 Months", monthly: "₹ 8,500/month" },
-    { title: "21 to 30 lac", price: "₹ 1,10,000", months: "10 Months", monthly: "₹ 11,000/month" },
-    { title: "31 to 40 lac", price: "₹ 1,35,000", months: "10 Months", monthly: "₹ 13,500/month" },
-    { title: "41 to 50 lac", price: "₹ 1,60,000", months: "10 Months", monthly: "₹ 16,000/month" },
-  ];
-
   return (
-    <div 
-    style={{ 
-    padding: "40px 0", 
-    backgroundImage: "url('/RBG.png')", 
-    backgroundSize: "cover", 
-    backgroundPosition: "center", 
-    backgroundRepeat: "no-repeat" 
-    }} >
+    <div
+      style={{
+        padding: "40px 0",
+        backgroundImage: "url('/RBG.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       {/* Heading Before Infographic */}
       <SectionWrapper>
         <SectionHeading>
@@ -250,38 +263,65 @@ export default function HelpAndFees() {
       </picture>
 
       {/* Fees Section */}
-          <FeesSection>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-      >
-        <FeesHeading>
-          <img src="/rupee-icon.png" alt="Rupee" /> Our Fee Structure
-        </FeesHeading>
+      <FeesSection>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <FeesHeading>
+            <img src="/rupee-icon.png" alt="Rupee" /> Our Fee Structure
+          </FeesHeading>
 
-        <FeesSubText>
-          <span>Simple. Transparent. Fair.</span>  
-          Start with just <Highlight>₹3540</Highlight> to access all services.  
-          <br />
-          <em>You pay only when your loan is settled!</em>
-        </FeesSubText>
+          <FeesSubText>
+            <span>Simple. Transparent. Fair.</span> Start with just{" "}
+            <Highlight>₹3540</Highlight> to access all services. <br />
+            <em>You pay only when your loan is settled!</em>
+          </FeesSubText>
 
-        <FeeCard>
-          <h3>Start with ₹3540/- <span>including GST</span></h3>
-          <p>One-time fee to begin services</p>
-          <Divider />
-          <h3>Pay Only on Settlement</h3>
-          <p>No hidden charges. 100% transparency.</p>
-        </FeeCard>
+          {/* Cards Side by Side */}
+          <CardsContainer>
+            {/* No Settlement Card */}
+            <Card>
+              <h3>
+                No Settlement, <span>No Fees</span>
+              </h3>
+              <p>
+                We only charge after your loan or credit card debt is successfully
+                settled. There’s no upfront cost, no hidden charges, and no risk
+                to you.
+              </p>
 
-        {/* <Note>
-          <span>Fair & Transparent –</span> No % fees on loan outstanding like others.  
-          Same affordable fee for everyone.
-        </Note> */}
-      </motion.div>
-    </FeesSection>
+              <div className="steps">
+                <div>
+                  <FaPhoneAlt />
+                  <span>Contact Us</span>
+                </div>
+                <div>
+                  <FaHandshake />
+                  <span>We Negotiate</span>
+                </div>
+                <div>
+                  <FaCheckCircle />
+                  <span>Pay After Settlement</span>
+                </div>
+              </div>
+            </Card>
+
+            {/* Fee Card */}
+            <Card>
+              <h3>
+                Start with ₹3540/- <span>including GST</span>
+              </h3>
+              <p>One-time fee to begin services</p>
+              <Divider />
+              <h3>Pay Only on Settlement</h3>
+              <p>No hidden charges. 100% transparency.</p>
+            </Card>
+          </CardsContainer>
+        </motion.div>
+      </FeesSection>
 
       <ButtonWrapper>
         <GetStartedButton onClick={() => setIsModalOpen(true)}>
@@ -289,7 +329,7 @@ export default function HelpAndFees() {
         </GetStartedButton>
       </ButtonWrapper>
 
-      {/* Existing Modal Component */}
+      {/* Modal */}
       {isModalOpen && (
         <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       )}
