@@ -262,6 +262,7 @@ const HomeSection: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
+  
   return (
     <Section id="home" ref={sectionRef}>
       <BackgroundImage activeIndex={carouselIndex}>
