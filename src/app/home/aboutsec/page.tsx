@@ -44,6 +44,7 @@ const AboutSection = () => {
           height={520}
         />
       </ImageWrapper>
+      
     </AboutContainer>
   );
 };
