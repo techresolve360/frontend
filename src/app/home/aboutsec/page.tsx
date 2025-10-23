@@ -77,7 +77,7 @@ const AboutContainer = styled.section`
 
   @media (max-width: 768px) {
     flex-direction: column-reverse;
-    text-align: center;
+    text-align: start;
     padding: 100px 24px 60px 24px;
     gap: 30px;
   }
@@ -94,7 +94,7 @@ const TextContent = styled.div`
   text-align: left;
 
   @media (max-width: 768px) {
-    text-align: center;
+    text-align: left;
   }
 
   h2 {
@@ -194,6 +194,10 @@ const ImageWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const StyledImage = styled(Image)`
@@ -210,7 +214,14 @@ const StyledImage = styled(Image)`
 
   @media (max-width: 768px) {
     width: 100%;
+    max-width: 560px; /* ensures large phones/tablets look balanced */
     height: auto;
-    aspect-ratio: 1 / 1;
+    border-radius: 16px;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 14px;
   }
 `;

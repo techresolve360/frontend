@@ -47,10 +47,12 @@ const cities = ["Bangalore", "Delhi-NCR", "Hyderabad", "Other"];
 // ];
 
 const outstandingRanges = [
-  "0–5 Lakh",
-  "5–10 Lakh",
+  "0–10 Lakh",
   "10–20 Lakh",
-  "20 Lakh +",
+  "20-30 Lakh",
+  "30-40 Lakh",
+  "40-50 Lakh",
+  "50 Lakh +",
 ];
 
 const ContactFormModal: React.FC<ModalProps> = ({ isOpen = true, onClose, mode = "modal" }) => {

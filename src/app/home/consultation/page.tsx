@@ -156,7 +156,7 @@ const Consultation = () => {
         >
           <Container>
             <MapContainer>
-              <MapImage src="/india 2.png" alt="India Map" />
+              <MapImage src="/india 3.png" alt="India Map" />
             </MapContainer>
 
             <Divider />
