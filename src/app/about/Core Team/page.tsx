@@ -194,11 +194,6 @@ const Services = () => {
                 desc: "Senior Inside Sales Manager" 
             },
             {
-              img: "/ramesh.jpeg",
-              name: "Ramesh Vedularapu",
-              desc: "Head Legal - Telangana & Andhra Pradesh",
-            },
-            {
               img: "/maharudrappa.jpeg",
               name: "Maharudrappa M Mirji",
               desc: "Advocate",
