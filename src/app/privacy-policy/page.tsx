@@ -11,7 +11,7 @@ const PageContainer = styled.section`
 `;
 
 const HeaderSection = styled.section`
-  background-image: url("/BG1.png");
+  background-image: url("https://d2uvjal4nw1o1a.cloudfront.net/public/BG1.png");
   background-size: cover;
   background-position: center;
   padding: 80px 150px;
