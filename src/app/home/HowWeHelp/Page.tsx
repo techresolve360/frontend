@@ -43,7 +43,7 @@ const FullWidthImage = styled.img`
 `;
 
 const FeesSection = styled.section`
-  background-image: url("/fees-bg.png");
+  background-image: url("https://d2uvjal4nw1o1a.cloudfront.net/public/fees-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -243,7 +243,7 @@ export default function HelpAndFees() {
     <div
       style={{
         padding: "40px 0",
-        backgroundImage: "url('/RBG.png')",
+        backgroundImage: "url('https://d2uvjal4nw1o1a.cloudfront.net/publichttps://d2uvjal4nw1o1a.cloudfront.net/public/RBG.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -258,8 +258,8 @@ export default function HelpAndFees() {
 
       {/* Responsive Infographic Image */}
       <picture>
-        <source media="(max-width: 768px)" srcSet="/mobInfograph.png" />
-        <FullWidthImage src="/steps-infographic.png" alt="How We Help You" />
+        <source media="(max-width: 768px)" srcSet="https://d2uvjal4nw1o1a.cloudfront.net/public/mobInfograph.png" />
+        <FullWidthImage src="https://d2uvjal4nw1o1a.cloudfront.net/public/steps-infographic.png" alt="How We Help You" />
       </picture>
 
       {/* Fees Section */}
@@ -271,7 +271,7 @@ export default function HelpAndFees() {
           transition={{ duration: 0.5 }}
         >
           <FeesHeading>
-            <img src="/rupee-icon.png" alt="Rupee" /> Our Fee Structure
+            <img src="https://d2uvjal4nw1o1a.cloudfront.net/public/rupee-icon.png" alt="Rupee" /> Our Fee Structure
           </FeesHeading>
 
           <FeesSubText>

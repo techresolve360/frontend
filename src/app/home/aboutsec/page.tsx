@@ -38,7 +38,7 @@ const AboutSection = () => {
 
       <ImageWrapper>
         <StyledImage
-          src="/aboutsec.jpg"
+          src="https://d2uvjal4nw1o1a.cloudfront.net/public/aboutsec.jpg"
           alt="About Resolve360"
           width={520}
           height={520}
@@ -57,7 +57,7 @@ const AboutContainer = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-image: url("/RBG.png");
+  background-image: url("https://d2uvjal4nw1o1a.cloudfront.net/public/RBG.png");
   background-size: cover;
   background-position: center;
   background-color: #fff;

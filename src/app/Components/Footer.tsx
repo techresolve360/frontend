@@ -31,7 +31,7 @@ export default function Footer() {
         >
           <LeftSection>
             <Link href="/" passHref>
-              <FooterLogo src="/FLogo.png" alt="Logo" />
+              <FooterLogo src="https://d2uvjal4nw1o1a.cloudfront.net/public/FLogo.png" alt="Logo" />
             </Link>
             <h3>Resove360 Across India</h3> <br />
             {/* <p>

@@ -224,7 +224,7 @@ const blogData = {
   readTime: "3 min read",
   subheading: "Understand Your Legal Rights and How to Halt Unethical Practices",
   heroImage:
-    "/Blog.png",
+    "https://d2uvjal4nw1o1a.cloudfront.net/public/Blog.png",
   sections: [
     {
       type: "paragraph",

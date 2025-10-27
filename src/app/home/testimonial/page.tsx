@@ -8,7 +8,7 @@ const TestimonialsSection = styled.section`
   padding: 50px 70px;
   text-align: left;
   position: relative;
-  background-image: url("/RBG.png");
+  background-image: url("https://d2uvjal4nw1o1a.cloudfront.net/public/RBG.png");
   background-size: cover;
   background-position: center;
 
@@ -198,31 +198,31 @@ export default function Testimonials() {
     {
       name: "Ravi Kumar",
       location: "Bengaluru, Karnataka",
-      avatar: "/avatar/image1.png",
+      avatar: "https://d2uvjal4nw1o1a.cloudfront.net/public/avatar/image1.png",
       text: `I had a total outstanding of <b>₹15,00,000</b>. The recovery agents kept calling and stressing me out. The team here helped me settle it for just <b>₹6,90,000</b>. I’m so relieved and thankful for their support!`,
     },
     {
       name: "Salma Begum",
       location: "Hyderabad, Telangana",
-      avatar: "/avatar/image2.png",
+      avatar: "https://d2uvjal4nw1o1a.cloudfront.net/public/avatar/image2.png",
       text: `My total outstanding was <b>₹28,00,000</b>, and I was under immense pressure from collection calls. These professionals handled everything calmly and got it settled for only <b>₹10,65,000</b>. Truly life-changing!`,
     },
     {
       name: "Deepak Sharma",
       location: "Lucknow, Uttar Pradesh",
-      avatar: "/avatar/image3.png",
+      avatar: "https://d2uvjal4nw1o1a.cloudfront.net/public/avatar/image3.png",
       text: `I had a <b>₹46,00,000</b> loan that became impossible to manage. The team negotiated with the bank and brought it down to just <b>₹15,18,000</b>. I couldn’t believe such a big reduction was possible.`,
     },
     {
       name: "Rina D'souza",
       location: "Kochi, Kerala",
-      avatar: "/avatar/image5.png",
+      avatar: "https://d2uvjal4nw1o1a.cloudfront.net/public/avatar/image5.png",
       text: `My <b>₹80,00,000</b> outstanding had me completely stressed out. This amazing team took charge and settled it for only <b>₹33,60,000</b>. Their professionalism and support were incredible!`,
     },
     {
       name: "Ayesha Khan",
       location: "Pune, Maharashtra",
-      avatar: "/avatar/image4.png",
+      avatar: "https://d2uvjal4nw1o1a.cloudfront.net/public/avatar/image4.png",
       text: `I was struggling with a <b>₹33,00,000</b> outstanding and constant calls from recovery agents. The team negotiated efficiently and got it settled for <b>₹13,96,000</b>. I finally have peace of mind!`,
     },
   ]

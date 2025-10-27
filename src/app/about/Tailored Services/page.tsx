@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const Section = styled.section`
   padding: 40px 70px;
   background: #fffff;
-  background-image: url("/RBG.png");
+  background-image: url("https://d2uvjal4nw1o1a.cloudfront.net/public/RBG.png");
   background-size: cover;
   background-position: center;
 
@@ -115,19 +115,19 @@ export default function CyberFraudStats() {
       subheading: "❯❯ Reduce your Debt by up to 70%",
       cards: [
         {
-          icon: "/icons/Request.png",
+          icon: "https://d2uvjal4nw1o1a.cloudfront.net/public/icons/Request.png",
           title: "Moratorium Request",
           desc: "We secure moratoriums to pause payments and ease financial stress.",
           delay: 0.0,
         },
         {
-          icon: "/icons/Repayment.png",
+          icon: "https://d2uvjal4nw1o1a.cloudfront.net/public/icons/Repayment.png",
           title: "Repayment Plan Structuring",
           desc: "We create repayment plans that fit your finances and ease creditor demands.",
           delay: 0.1,
         },
         {
-          icon: "/icons/Settlement.png",
+          icon: "https://d2uvjal4nw1o1a.cloudfront.net/public/icons/Settlement.png",
           title: "Settlement Negotiation",
           desc: "We secure fair, one-time debt settlements to help you move forward.",
           delay: 0.2,
@@ -138,19 +138,19 @@ export default function CyberFraudStats() {
       subheading: "❯❯ Anti-Harassment Services",
       cards: [
         {
-          icon: "/icons/HarassmentResolution.png",
+          icon: "https://d2uvjal4nw1o1a.cloudfront.net/public/icons/HarassmentResolution.png",
           title: "Harassment Resolution",
           desc: "We handle recovery agent issues, ensuring professional and lawful communication.",
           delay: 0.0,
         },
         {
-          icon: "/icons/Forward.png",
+          icon: "https://d2uvjal4nw1o1a.cloudfront.net/public/icons/Forward.png",
           title: "Forward Communication",
           desc: "Redirect recovery calls to us, and we'll handle them stress-free.",
           delay: 0.1,
         },
         {
-          icon: "/icons/Stress.png",
+          icon: "https://d2uvjal4nw1o1a.cloudfront.net/public/icons/Stress.png",
           title: "Stress-Free Resolution",
           desc: "Our goal is to protect your mental well-being while negotiating with creditors on your behalf.",
           delay: 0.2,
@@ -161,19 +161,19 @@ export default function CyberFraudStats() {
       subheading: "❯❯ Legal Support",
       cards: [
         {
-          icon: "/icons/RBI.png",
+          icon: "https://d2uvjal4nw1o1a.cloudfront.net/public/icons/RBI.png",
           title: "RBI Guidelines Compliance",
           desc: "We ensure all actions follow RBI guidelines, safeguarding you from unfair practices.",
           delay: 0.0,
         },
         {
-          icon: "/icons/Assistance.png",
+          icon: "https://d2uvjal4nw1o1a.cloudfront.net/public/icons/Assistance.png",
           title: "Comprehensive Assistance",
           desc: "we offer complete legal support ranging from anti harassment services to execution of loan settlement agreements.",
           delay: 0.1,
         },
         {
-          icon: "/icons/Representation.png",
+          icon: "https://d2uvjal4nw1o1a.cloudfront.net/public/icons/Representation.png",
           title: "Experienced Representation",
           desc: "If your case goes to court, our lawyers protect your interests for the best outcome.",
           delay: 0.2,
@@ -184,19 +184,19 @@ export default function CyberFraudStats() {
       subheading: "❯❯ Custom Solution for You",
       cards: [
         {
-          icon: "/icons/Debt.png",
+          icon: "https://d2uvjal4nw1o1a.cloudfront.net/public/icons/Debt.png",
           title: "Debt Review and Strategy",
           desc: "Our experts create realistic and impactful repayment or settlement plans based on your debt profile.",
           delay: 0.0,
         },
         {
-          icon: "/icons/Securing.png",
+          icon: "https://d2uvjal4nw1o1a.cloudfront.net/public/icons/Securing.png",
           title: "Securing Financial Stability",
           desc: "With our step-by-step guidance, you'll gain clarity, confidence, and control over your finances",
           delay: 0.1,
         },
         {
-          icon: "/icons/Plans.png",
+          icon: "https://d2uvjal4nw1o1a.cloudfront.net/public/icons/Plans.png",
           title: "Customized Financial Plans",
           desc: "We assess your finances and create tailored strategies to tackle your challenges.",
           delay: 0.2,

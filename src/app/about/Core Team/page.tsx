@@ -9,7 +9,7 @@ const ServicesSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background-image: url("/RBG.png");
+  background-image: url("https://d2uvjal4nw1o1a.cloudfront.net/public/RBG.png");
   background-size: cover;
   background-position: center;
   padding: 30px 70px;
@@ -169,32 +169,32 @@ const Services = () => {
         <CardsGrid>
           {[
             {
-              img: "/vipin.jpg",
+              img: "https://d2uvjal4nw1o1a.cloudfront.net/public/vipin.jpg",
               name: "Adv. Vipin Choudhary",
               desc: "Founder",
             },
             {
-              img: "/vikas1.jpg",
+              img: "https://d2uvjal4nw1o1a.cloudfront.net/public/vikas1.jpg",
               name: "Vikas Katoch",
               desc: "Co-Founder",
             },
             {
-              img: "/shruti.jpeg",
+              img: "https://d2uvjal4nw1o1a.cloudfront.net/public/shruti.jpeg",
               name: "M. Shruthi Karumbaiah",
               desc: "General Counsel"
             },
             { 
-                img: "/mohith.jpeg", 
+                img: "https://d2uvjal4nw1o1a.cloudfront.net/public/mohith.jpeg", 
                 name: "Mohith N", 
                 desc: "Operations Head" 
             },
             { 
-                img: "/Dennis.jpeg", 
+                img: "https://d2uvjal4nw1o1a.cloudfront.net/public/Dennis.jpeg", 
                 name: "Dennis", 
                 desc: "Senior Inside Sales Manager" 
             },
             {
-              img: "/maharudrappa.jpeg",
+              img: "https://d2uvjal4nw1o1a.cloudfront.net/public/maharudrappa.jpeg",
               name: "Maharudrappa M Mirji",
               desc: "Advocate",
             }
@@ -219,79 +219,79 @@ const Services = () => {
         <CardsGrid>
           {[
             { 
-                img: "/sakshi.png", 
+                img: "https://d2uvjal4nw1o1a.cloudfront.net/public/sakshi.png", 
                 name: "Sakshi Rai", 
                 desc: "Gurugram, Haryana",
                 lang: " Hindi, English" 
             },
             { 
-                img: "/savan.png", 
+                img: "https://d2uvjal4nw1o1a.cloudfront.net/public/savan.png", 
                 name: "Savan Chauhan", 
                 desc: "Ahmedabad/Gandhinagar Gujarat",
                 lang: " Hindi, English, Gujarati"
             },
             { 
-                img: "/pritam.jpeg", 
+                img: "https://d2uvjal4nw1o1a.cloudfront.net/public/pritam.jpeg", 
                 name: "Pritam Patel",
                 desc: "Surat, Gujarat" ,
                 lang: " Hindi, English, Gujarati"
             },
             { 
-                img: "/pinky.jpeg", 
+                img: "https://d2uvjal4nw1o1a.cloudfront.net/public/pinky.jpeg", 
                 name: "Pinky Singh", 
                 desc: "Hyderabad / Telangana",
                 lang: " Hindi, English, Telugu"
             },
             { 
-                img: "/santosh.jpeg", 
+                img: "https://d2uvjal4nw1o1a.cloudfront.net/public/santosh.jpeg", 
                 name: "Santosh Balekundri", 
                 desc: "Belagavi, Karnataka",
                 lang: " Kannada, Hindi, English, Marathi"
             },    
             {
-                img: "/jayesh.jpeg",
+                img: "https://d2uvjal4nw1o1a.cloudfront.net/public/jayesh.jpeg",
                 name: "Jayesh Parmar",
                 desc: "Vadodara, Gujarat",
                 lang: " Hindi, English, Gujarati"
             },
             { 
-                img: "/sanjay.jpeg", 
+                img: "https://d2uvjal4nw1o1a.cloudfront.net/public/sanjay.jpeg", 
                 name: "Sanjay Sharma", 
                 desc: "BHOPAL, Madhya Pradesh",
                 lang: " Hindi, English"
             },
             {
-                img: "/saniya.jpeg",
+                img: "https://d2uvjal4nw1o1a.cloudfront.net/public/saniya.jpeg",
                 name: "Shaik saniya Firdouse",
                 desc: "Hyderabad, Telangana",
                 lang: " Hindi, English, Telugu"
             },
             { 
-                img: "/kiran.jpeg", 
+                img: "https://d2uvjal4nw1o1a.cloudfront.net/public/kiran.jpeg", 
                 name: "Kiran Naidu", 
                 desc: "Hyderabad, Telangana",
                 lang: " Telugu, Hindi, English"
             },    
             {
-                img: "/priyadharshini.jpeg",
+                img: "https://d2uvjal4nw1o1a.cloudfront.net/public/priyadharshini.jpeg",
                 name: "Priyadharshini Subramanian",
                 desc: "Bangalore, Karnataka",
                 lang: " Tamil, English, Hindi"
             },
             { 
-                img: "/jitesh.jpeg",
+                img: "https://d2uvjal4nw1o1a.cloudfront.net/public/jitesh.jpeg",
                 name: "Jitesh Kotiya",
                 desc: "Pune, Maharastra",
                 lang: " Gujarati Hindi and English"
             },
             {
-                img: "/fritz.jpeg",
+                img: "https://d2uvjal4nw1o1a.cloudfront.net/public/fritz.jpeg",
                 name: "Fritz Farias",
                 desc: "Bangalore, Karnataka ",
                 lang: "English, Kannada, Hindi"
             },
             {
-                img: "/mirza.jpeg",
+                img: "https://d2uvjal4nw1o1a.cloudfront.net/public/mirza.jpeg",
                 name: "Mirza Twasif Baig",
                 desc: "Bangalore, Karnataka",
                 lang: " English, Hindi, Odia"

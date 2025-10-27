@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const Section = styled.section`
   padding: 60px 70px;
   background: #ffffff;
-  background-image: url("/RBG.png");
+  background-image: url("https://d2uvjal4nw1o1a.cloudfront.net/public/RBG.png");
   background-size: cover;
   background-position: center;
 
@@ -114,7 +114,7 @@ const ServiceDesc = styled.div`
 export default function PremiumServices() {
   const services = [
     {
-      icon: "/icons/members.png",
+      icon: "https://d2uvjal4nw1o1a.cloudfront.net/public/icons/members.png",
       title: "Declaration for Parents/Family Members",
       desc: (
         <ul>
@@ -128,7 +128,7 @@ export default function PremiumServices() {
       ),
     },
     {
-      icon: "/icons/RBI.png",
+      icon: "https://d2uvjal4nw1o1a.cloudfront.net/public/icons/RBI.png",
       title: "Intimation Notice & Replies to Demand Notices",
       desc: (
         <>
@@ -145,7 +145,7 @@ export default function PremiumServices() {
       ),
     },
     {
-      icon: "/icons/Forward.png",
+      icon: "https://d2uvjal4nw1o1a.cloudfront.net/public/icons/Forward.png",
       title: "Recovery Agent Home Visit – Anti-Harassment Service",
       desc: (
         <ul>
@@ -158,7 +158,7 @@ export default function PremiumServices() {
       ),
     },
     {
-      icon: "/icons/agent.png",
+      icon: "https://d2uvjal4nw1o1a.cloudfront.net/public/icons/agent.png",
       title: "Recovery Agent Calls – Anti-Harassment Service",
       desc: (
         <ul>
@@ -171,21 +171,21 @@ export default function PremiumServices() {
       ),
     },
     {
-      icon: "/icons/mobnum.png",
+      icon: "https://d2uvjal4nw1o1a.cloudfront.net/public/icons/mobnum.png",
       title: "Dedicated Mobile Number for Anti-Harassment",
       desc: (
         <p>We will provide a dedicated mobile number. Client’s family members can call this number in case of harassment, and our legal team will speak to the recovery agent directly.</p>
       ),
     },
     {
-      icon: "/icons/arbitration.png",
+      icon: "https://d2uvjal4nw1o1a.cloudfront.net/public/icons/arbitration.png",
       title: "Arbitration & Conciliation Proceedings",
       desc: (
         <p>We represent you in arbitration/conciliation proceedings initiated by lenders. Drafting replies, objections, written statements, rejoinders, appearances – end-to-end representation included.</p>
       ),
     },
     {
-      icon: "/icons/HarassmentResolution.png",
+      icon: "https://d2uvjal4nw1o1a.cloudfront.net/public/icons/HarassmentResolution.png",
       title: "Settlement Negotiation",
       desc: (
         <ul>

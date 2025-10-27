@@ -8,7 +8,7 @@ import styled from "styled-components";
 const FaqSection = styled.section`
   width: 100%;
   padding: 40px 70px;
-  background-image: url("/RBG.png");
+  background-image: url("https://d2uvjal4nw1o1a.cloudfront.net/public/RBG.png");
   background-size: cover;
   background-position: center;
 

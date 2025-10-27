@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const Section = styled.section`
   padding: 40px 70px ;
   background: #fffff;
-  background-image: url("/RBG.png");
+  background-image: url("https://d2uvjal4nw1o1a.cloudfront.net/public/RBG.png");
   background-size: cover;
   background-position: center;
 
@@ -127,19 +127,19 @@ export default function CyberFraudStats() {
       <CardsContainer>
         {[
           {
-            icon: "/icons/Online Consultation.png",
+            icon: "https://d2uvjal4nw1o1a.cloudfront.net/public/icons/Online Consultation.png",
             title: "Online Consultation",
             desc: "Speak to our expert team and share your concerns at no cost.",
             delay: 0.0,
           },
           {
-            icon: "/icons/Case Evaluation.png",
+            icon: "https://d2uvjal4nw1o1a.cloudfront.net/public/icons/Case Evaluation.png",
             title: "Case Evaluation",
             desc: "We create repayment plans that fit your finances and ease creditor demands.",
             delay: 0.1,
           },
           {
-            icon: "/icons/Solutions.png",
+            icon: "https://d2uvjal4nw1o1a.cloudfront.net/public/icons/Solutions.png",
             title: "Customized Solutions & Fee Proposal",
             desc: "Receive a personalized roadmap to tackle your financial challenges, with a transparent fee structure for our paid services.",
             delay: 0.2,

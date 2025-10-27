@@ -10,7 +10,7 @@ const ConsultationSection = styled.section`
   align-items: center;
   justify-content: center;
   background-color: #ffffff;
-  background-image: url("/RBG.png");
+  background-image: url("https://d2uvjal4nw1o1a.cloudfront.net/public/RBG.png");
   background-size: cover;
   background-position: center;
   padding: 50px 70px;
@@ -156,7 +156,7 @@ const Consultation = () => {
         >
           <Container>
             <MapContainer>
-              <MapImage src="/india 3.png" alt="India Map" />
+              <MapImage src="https://d2uvjal4nw1o1a.cloudfront.net/public/india 3.png" alt="India Map" />
             </MapContainer>
 
             <Divider />

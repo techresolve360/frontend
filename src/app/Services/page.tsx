@@ -10,7 +10,7 @@ import Consultation from "../home/consultation/page";
 const ServicesSection = styled.section`
   display: flex;
   align-items: center;
-    background-image: url("/RBG.png");
+    background-image: url("https://d2uvjal4nw1o1a.cloudfront.net/public/RBG.png");
   background-size: cover;
   background-position: center;
   justify-content: space-between;
@@ -147,7 +147,7 @@ const Services = () => {
       </TextContent>
 
       <ImageContainer>
-        <img src="/services-image.png" alt="Services" />
+        <img src="https://d2uvjal4nw1o1a.cloudfront.net/public/services-image.png" alt="Services" />
       </ImageContainer>
     </ServicesSection>
 

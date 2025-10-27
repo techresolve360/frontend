@@ -281,8 +281,8 @@ const HomeSection: React.FC = () => {
   return (
     <Section id="home" ref={sectionRef}>
       <BackgroundImage activeIndex={carouselIndex}>
-        <img src="/resolveBG1.png" alt="Slide 1 Background" />
-        <img src="/fees-bg.png" alt="Slide 2 Background" />
+        <img src="https://d2uvjal4nw1o1a.cloudfront.net/public/resolveBG1.png" alt="Slide 1 Background" />
+        <img src="https://d2uvjal4nw1o1a.cloudfront.net/public/fees-bg.png" alt="Slide 2 Background" />
       </BackgroundImage>
 
       <CarouselContainer>

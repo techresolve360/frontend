@@ -31,7 +31,7 @@ const Navbar = () => {
       <LogoContainer>
         <Link href="/" passHref>
           <Image
-            src="/Logo1.png"
+            src="https://d2uvjal4nw1o1a.cloudfront.net/public/Logo1.png"
             alt="Logo"
             width={150}
             height={32}
