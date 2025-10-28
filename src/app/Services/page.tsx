@@ -147,7 +147,7 @@ const Services = () => {
       </TextContent>
 
       <ImageContainer>
-        <img src="https://d2uvjal4nw1o1a.cloudfront.net/public/services-image.png" alt="Services" />
+        <img src="https://d2uvjal4nw1o1a.cloudfront.net/public/services-image.webp" alt="Services" />
       </ImageContainer>
     </ServicesSection>
 
