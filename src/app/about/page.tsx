@@ -209,7 +209,7 @@ const Services = () => {
         </TextContent>
 
         {/* Image on the right */}
-        <ImageRight src="https://d2uvjal4nw1o1a.cloudfront.net/public/mission.png" alt="Mission" />
+        <ImageRight src="/mission.png" alt="Mission" />
       </ServicesSection>
 
       <OurPhilosophy>
