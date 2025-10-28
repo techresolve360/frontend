@@ -19,25 +19,27 @@ const ServicesSection = styled.section`
   background-color: #fff;
   margin: auto;
 
-  @media (max-width: 1200px) {
-    padding: 120px 50px 10px 50px;
+  /* Slightly tighten for large desktops */
+  @media (max-width: 1400px) {
+    padding: 120px 60px;
     gap: 50px;
   }
 
-  @media (max-width: 992px) {
-    padding: 120px 40px 40px 40px;
-    gap: 40px;
+  /* Treat iPads like mobile — column layout starts earlier */
+  @media (max-width: 1180px) {
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 40px;
+    gap: 50px;
   }
 
   @media (max-width: 768px) {
-    flex-direction: column;
-    text-align: center;
-    padding: 120px 20px 40px 20px;
-    gap: 30px;
+    padding: 100px 25px 40px 25px;
+    gap: 35px;
   }
 
   @media (max-width: 480px) {
-    padding: 120px 16px 40px 16px;
+    padding: 100px 16px 40px 16px;
   }
 `;
 
@@ -53,24 +55,59 @@ const OurPhilosophy = styled.section`
   background-color: #fff;
   margin: auto;
 
-  @media (max-width: 1200px) {
-    padding: 20px 50px;
-    gap: 55px;
-  }
-  @media (max-width: 992px) {
-    padding: 15px 40px;
-    gap: 50px;
-  }
-  @media (max-width: 768px) {
-    padding: 12px 20px;
+  /* Apply same logic for iPads */
+  @media (max-width: 1180px) {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 40px;
     gap: 45px;
   }
-  @media (max-width: 480px) {
-    padding: 0px 16px 40px 16px;
-    gap: 20px;
+
+  @media (max-width: 768px) {
+    padding: 50px 25px;
+    gap: 35px;
   }
-  
+
+  @media (max-width: 480px) {
+    padding: 40px 16px;
+    gap: 25px;
+  }
 `;
+
+const ImageRight = styled.img`
+  flex: 1;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.15);
+  object-fit: contain;
+  align-self: center;
+
+  
+  @media (min-width: 1181px) {
+    width: 45%;
+    border-radius: 16px;
+  }
+
+
+  @media (max-width: 1180px) {
+    width: 100vw; 
+    max-width: 100%; 
+    margin: 0; 
+    border-radius: 16;
+  }
+
+  /* Small tablets and mobile */
+  @media (max-width: 768px) {
+    width: 100vw;
+  }
+
+  @media (max-width: 480px) {
+    width: 100vw;
+  }
+`;
+
+
 
 const TextContent = styled.div`
   flex: 1;
@@ -147,35 +184,6 @@ const TextContent = styled.div`
     @media (max-width: 480px) {
       font-size: 16px;
     }
-  }
-`;
-
-const ImageRight = styled.img`
-  flex: 1;
-  width: 400px;
-  height: 400px; /* maintain original ratio */
-  border-radius: 16px;
-  box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.15);
-  object-fit: cover; 
-
-  @media (max-width: 1200px) {
-    width: 350px;
-  }
-
-  @media (max-width: 992px) {
-    width: 320px;
-  }
-
-  @media (max-width: 768px) {
-    width: 85vw;       
-    max-width: 380px; 
-    height: auto;    
-  }
-
-  @media (max-width: 480px) {
-    width: 90vw;
-    max-width: 360px;
-    height: auto;
   }
 `;
 
