@@ -152,23 +152,33 @@ const TextContent = styled.div`
 
 const ImageRight = styled.img`
   flex: 1;
-  width: 400px;   /* fixed width */
-  height: 400px;  /* fixed height to make it square */
+  width: 400px;
+  height: 400px; /* maintain original ratio */
   border-radius: 16px;
   box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.15);
-  object-fit: cover; /* crop while covering */
+  object-fit: cover; 
+
+  @media (max-width: 1200px) {
+    width: 350px;
+  }
 
   @media (max-width: 992px) {
-    width: 300px;
-    height: 300px;
+    width: 320px;
   }
 
   @media (max-width: 768px) {
-    width: 100%;
-    height: auto;   /* allow responsive on small screens */
-    aspect-ratio: 1/1; /* keep it square */
+    width: 85vw;       
+    max-width: 380px; 
+    height: auto;    
+  }
+
+  @media (max-width: 480px) {
+    width: 90vw;
+    max-width: 360px;
+    height: auto;
   }
 `;
+
 
 const Services = () => {
   return (
