@@ -40,7 +40,7 @@ const cities = [
   "Telangana", 
   "Andhra Pradesh",
   "Karnataka",
-  "Chennai",
+  "Tamil Nadu",
   "Other"];
 
 // const callTimes = [
