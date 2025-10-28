@@ -209,7 +209,7 @@ const Services = () => {
         </TextContent>
 
         {/* Image on the right */}
-        <ImageRight src="/mission.png" alt="Mission" />
+        <ImageRight src="/mission.webp" alt="Mission" />
       </ServicesSection>
 
       <OurPhilosophy>
