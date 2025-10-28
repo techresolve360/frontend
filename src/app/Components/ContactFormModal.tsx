@@ -33,7 +33,15 @@ const ErrorText = {
   display: "block",
 };
 
-const cities = ["Bangalore", "Delhi-NCR", "Hyderabad", "Other"];
+const cities = [
+  "Haryana",
+  "Delhi-NCR", 
+  "Maharashtra",
+  "Telangana", 
+  "Andhra Pradesh",
+  "Karnataka",
+  "Chennai",
+  "Other"];
 
 // const callTimes = [
 //   "Immediately",
